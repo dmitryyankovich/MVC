@@ -1,0 +1,41 @@
+﻿@model IEnumerable<myProject.Models.Ticket>
+<div>
+    <table id="tickets">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Logo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TypeOfTicket)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Logo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeOfTicket)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Ticket", new { id = item.Id })"><img alt="edit" src="/Content/edit.png" class="action" /></a>
+                    <a href="@Url.Action("Delete", "Ticket", new { id = item.Id })"><img alt="edit" src="/Content/delete.png" class="action" /></a>
+                    <a href="@Url.Action("Details", "Ticket", new { id = item.Id })"><img alt="edit" src="/Content/detail.png" class="action" /></a>
+                </td>
+            </tr>
+        }
+    </table>
+</div>

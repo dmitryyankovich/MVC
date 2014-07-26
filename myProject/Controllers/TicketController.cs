@@ -20,10 +20,22 @@ namespace myProject.Controllers
             return PartialView(tickets);
         }
 
-        public ActionResult Tickets()
+        public ActionResult Tickets(int sort =0)
         {
-            return View(_unitOfWork.TicketRepository.GetAll());
+            IEnumerable<Ticket> tickets;
+            if (sort == 0)
+            {
+                tickets = _unitOfWork.TicketRepository.GetAll();
+            }
+            else
+            {
+                tickets = _unitOfWork.TicketRepository.GetAll();
+                tickets = tickets.OrderBy(s => s.TypeOfTicket);
+            }
+            return View(tickets);
         }
+
+
         // GET: Ticket/Details/5
         public ActionResult Details(int id)
         {
@@ -50,7 +62,7 @@ namespace myProject.Controllers
                 ticket.UserId = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Id;
                 _unitOfWork.TicketRepository.Insert(ticket);
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("Tickets");
             }
             return View();
         }
@@ -74,7 +86,7 @@ namespace myProject.Controllers
             {
                 _unitOfWork.TicketRepository.Update(ticket);
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("Tickets");
             }
             return View();
 
@@ -97,7 +109,7 @@ namespace myProject.Controllers
         {
             _unitOfWork.TicketRepository.Delete(id);
             _unitOfWork.Save();
-            return RedirectToAction("Index");
+            return RedirectToAction("Tickets");
         }
     }
 }
