@@ -1,0 +1,173 @@
+c:\users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.csprojResolveAssemblyReference.cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\myProject.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\myProject.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\myProject.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Antlr3.Runtime.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\EntityFramework.SqlServer.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Newtonsoft.Json.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Helpers.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Mvc.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Optimization.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Razor.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.Razor.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\WebGrease.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Helpers.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Mvc.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Optimization.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.Razor.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\System.Web.WebPages.Razor.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Antlr3.Runtime.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Newtonsoft.Json.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\EntityFramework.SqlServer.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.pdb
+D:\New folder\project\myProject\bin\myProject.dll
+D:\New folder\project\myProject\bin\myProject.pdb
+D:\New folder\project\myProject\bin\Antlr3.Runtime.dll
+D:\New folder\project\myProject\bin\EntityFramework.dll
+D:\New folder\project\myProject\bin\EntityFramework.SqlServer.dll
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Google.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New folder\project\myProject\bin\Microsoft.Web.Infrastructure.dll
+D:\New folder\project\myProject\bin\Newtonsoft.Json.dll
+D:\New folder\project\myProject\bin\Owin.dll
+D:\New folder\project\myProject\bin\System.Web.Helpers.dll
+D:\New folder\project\myProject\bin\System.Web.Mvc.dll
+D:\New folder\project\myProject\bin\System.Web.Optimization.dll
+D:\New folder\project\myProject\bin\System.Web.Razor.dll
+D:\New folder\project\myProject\bin\System.Web.WebPages.Deployment.dll
+D:\New folder\project\myProject\bin\System.Web.WebPages.dll
+D:\New folder\project\myProject\bin\System.Web.WebPages.Razor.dll
+D:\New folder\project\myProject\bin\WebGrease.dll
+D:\New folder\project\myProject\bin\System.Web.Helpers.xml
+D:\New folder\project\myProject\bin\System.Web.Mvc.xml
+D:\New folder\project\myProject\bin\System.Web.Optimization.xml
+D:\New folder\project\myProject\bin\System.Web.Razor.xml
+D:\New folder\project\myProject\bin\System.Web.WebPages.xml
+D:\New folder\project\myProject\bin\System.Web.WebPages.Deployment.xml
+D:\New folder\project\myProject\bin\System.Web.WebPages.Razor.xml
+D:\New folder\project\myProject\bin\Antlr3.Runtime.pdb
+D:\New folder\project\myProject\bin\Newtonsoft.Json.xml
+D:\New folder\project\myProject\bin\EntityFramework.xml
+D:\New folder\project\myProject\bin\EntityFramework.SqlServer.xml
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New folder\project\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Google.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New folder\project\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New folder\project\myProject\obj\Debug\myProject.csprojResolveAssemblyReference.cache
+D:\New folder\project\myProject\obj\Debug\myProject.Migrations.InitialMigration.resources
+D:\New folder\project\myProject\obj\Debug\myProject.csproj.GenerateResource.Cache
+D:\New folder\project\myProject\obj\Debug\myProject.dll
+D:\New folder\project\myProject\obj\Debug\myProject.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.Migrations.InitialMigration.resources
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.csproj.GenerateResource.Cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.Migrations.SecondMigration.resources
+D:\New folder\myProject\myProject\bin\myProject.dll
+D:\New folder\myProject\myProject\bin\myProject.pdb
+D:\New folder\myProject\myProject\bin\Antlr3.Runtime.dll
+D:\New folder\myProject\myProject\bin\EntityFramework.dll
+D:\New folder\myProject\myProject\bin\EntityFramework.SqlServer.dll
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Cookies.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Facebook.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Google.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.OAuth.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Twitter.dll
+D:\New folder\myProject\myProject\bin\Microsoft.Web.Infrastructure.dll
+D:\New folder\myProject\myProject\bin\Newtonsoft.Json.dll
+D:\New folder\myProject\myProject\bin\Owin.dll
+D:\New folder\myProject\myProject\bin\System.Web.Helpers.dll
+D:\New folder\myProject\myProject\bin\System.Web.Mvc.dll
+D:\New folder\myProject\myProject\bin\System.Web.Optimization.dll
+D:\New folder\myProject\myProject\bin\System.Web.Razor.dll
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.Deployment.dll
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.dll
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.Razor.dll
+D:\New folder\myProject\myProject\bin\WebGrease.dll
+D:\New folder\myProject\myProject\bin\System.Web.Helpers.xml
+D:\New folder\myProject\myProject\bin\System.Web.Mvc.xml
+D:\New folder\myProject\myProject\bin\System.Web.Optimization.xml
+D:\New folder\myProject\myProject\bin\System.Web.Razor.xml
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.xml
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.Deployment.xml
+D:\New folder\myProject\myProject\bin\System.Web.WebPages.Razor.xml
+D:\New folder\myProject\myProject\bin\Antlr3.Runtime.pdb
+D:\New folder\myProject\myProject\bin\Newtonsoft.Json.xml
+D:\New folder\myProject\myProject\bin\EntityFramework.xml
+D:\New folder\myProject\myProject\bin\EntityFramework.SqlServer.xml
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\New folder\myProject\myProject\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Facebook.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Cookies.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.OAuth.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Google.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.Twitter.xml
+D:\New folder\myProject\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\New folder\myProject\myProject\obj\Debug\myProject.csprojResolveAssemblyReference.cache
+D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.InitialMigration.resources
+D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.SecondMigration.resources
+D:\New folder\myProject\myProject\obj\Debug\myProject.csproj.GenerateResource.Cache
+D:\New folder\myProject\myProject\obj\Debug\myProject.dll
+D:\New folder\myProject\myProject\obj\Debug\myProject.pdb
+D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.ThirdCommit.resources
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\obj\Debug\myProject.Migrations.ThirdCommit.resources

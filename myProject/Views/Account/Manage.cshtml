@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNet.Identity
+@model myProject.Models.ManageUserViewModel
+
+@{
+    ViewBag.Title = "Manage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Manage</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.UserName)</h4>
+    <hr />
+    <div>
+        <dl class="dl-horizontal avatar">
+            <img alt="photo" src="@Model.Avatar" class="avatar" />
+        </dl>
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Firstname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Firstname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Surname)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Surname)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Country)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Country)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+        </dl>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+            @Html.ActionLink("Back to List", "Index", "Home")
+        </p>
+
+        @using (Ajax.BeginForm("UserTickets", "Ticket", new AjaxOptions { UpdateTargetId = "ticketsPartial" }))
+        {
+            <input type="submit" value="Show tickets" class="btn btn-default" />
+        }
+    </div>
+    <div id="ticketsPartial"></div>
+</div>
