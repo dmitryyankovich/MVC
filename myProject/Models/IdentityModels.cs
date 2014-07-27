@@ -47,6 +47,8 @@ namespace myProject.Models
         }
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Languages> Languages { get; set; }
+
+        public System.Data.Entity.DbSet<myProject.Models.Replies> Replies { get; set; }
     }
     
 }

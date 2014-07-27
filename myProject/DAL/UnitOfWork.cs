@@ -37,18 +37,6 @@ namespace myProject.DAL
             }
         }
 
-        public MyProjectRepository<Languages> LanguageRepository
-        {
-            get
-            {
-                if (languageRepository == null)
-                {
-                    languageRepository = new MyProjectRepository<Languages>(context);
-                }
-                return languageRepository;
-            }
-        }
-
         public void Save()
         {
             context.SaveChanges();

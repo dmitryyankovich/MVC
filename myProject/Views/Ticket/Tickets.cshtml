@@ -13,6 +13,12 @@
 </p>
 <div class="col-md-6">
     <ul class="content">
+        <ul class="pagination custompages">
+            @for (int i = 0; i < (int)ViewData["TicketsPageNum"]; i++)
+            {
+                <li><a href="@Url.Action("Tickets", new {pageNum = i})">@(i + 1)</a></li>
+            }
+        </ul>
         @foreach (var item in Model)
         {
             <li class="ticket">
@@ -22,11 +28,13 @@
                     </a>
                 </div>
                 <div class="details">
-                    <h5 class="header_5"><a class="ticket_details" href="@Url.Action("Details", new {id = item.Id})">@item.Title</a></h5>
-                    <p class="typeOfTicket">
+                    <p class="ticketsType"><a class="ticket_details" href="@Url.Action("Details", new {id = item.Id})">@item.Title</a>
                         @Html.DisplayNameFor(model => model.TypeOfTicket)
                         :
                         @Html.DisplayFor(modelItem => item.TypeOfTicket)
+                    </p>
+                    <p class="ticketsLocation">
+                        @Html.DisplayFor(modelItem => item.User.Country), @Html.DisplayFor(modelItem => item.User.City)
                     </p>
                     <a id="user_profile" href="@Url.Action("Manage","Account",new {id=item.UserId})">
                         <img class="user_thumbnail" src="@item.User.Avatar" />
@@ -37,15 +45,6 @@
                 </div>
             </li>
         }
-    </ul>
-    <ul class="pagination custompages" style="">
-        <li><a href="#">«</a></li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">»</a></li>
     </ul>
 </div>
 

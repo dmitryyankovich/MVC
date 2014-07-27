@@ -159,6 +159,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RepliesController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
     <Compile Include="DAL\MyProjectRepository.cs" />
     <Compile Include="DAL\IMyProjectRepository.cs" />
@@ -248,6 +249,11 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Ticket\UserTickets.cshtml" />
     <Content Include="Views\Ticket\Tickets.cshtml" />
+    <Content Include="Views\Replies\Create.cshtml" />
+    <Content Include="Views\Replies\Delete.cshtml" />
+    <Content Include="Views\Replies\Details.cshtml" />
+    <Content Include="Views\Replies\Edit.cshtml" />
+    <Content Include="Views\Replies\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -20,7 +20,8 @@ namespace myProject.Controllers
             return PartialView(tickets);
         }
 
-        public ActionResult Tickets(int sort =0)
+        public ActionResult Tickets(int sort =0,int pageNum = 0)
+        
         {
             IEnumerable<Ticket> tickets;
             if (sort == 0)
@@ -32,6 +33,11 @@ namespace myProject.Controllers
                 tickets = _unitOfWork.TicketRepository.GetAll();
                 tickets = tickets.OrderBy(s => s.TypeOfTicket);
             }
+            int ticketCount = tickets.Count();
+            tickets = tickets.Skip(5 * pageNum).Take(5);
+            int ticketsPageNum = 0;
+            ticketsPageNum = ticketCount%5 != 0 ? (ticketCount/5 + 1) : ticketCount/5;
+            ViewData["TicketsPageNum"] = ticketsPageNum;
             return View(tickets);
         }
 

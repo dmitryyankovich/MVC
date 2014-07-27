@@ -250,3 +250,17 @@ ul {
     font-size: 14px;
     color: red;
 }
+
+.custompages {
+    margin: 0 auto;
+}
+
+.ticketsType {
+    font-size: 15px;
+    color: orange;
+}
+
+.ticketsLocation {
+    font-size: 15px;
+    color: #00a6cf;
+}
