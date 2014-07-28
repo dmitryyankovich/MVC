@@ -13,6 +13,7 @@ namespace myProject.Models
 
     public class ManageUserViewModel
     {
+        public int Id { get; set; }
         [Required]
         [Display(Name = "Firstname")]
         public string Firstname { get; set; }
@@ -84,6 +85,8 @@ namespace myProject.Models
 
         [Required]
         public string Country { get; set; }
+
+        public string Avatar { get; set; }
 
         [Required]
         public string City { get; set; }

@@ -16,7 +16,14 @@
         <ul class="pagination custompages">
             @for (int i = 0; i < (int)ViewData["TicketsPageNum"]; i++)
             {
-                <li><a href="@Url.Action("Tickets", new {pageNum = i})">@(i + 1)</a></li>
+                if (i == (int)ViewData["CurrentPage"])
+                {
+                    <li class="active"><a href="@Url.Action("Tickets", new {pageNum = i, sort = ViewData["ToSort"]})">@(i + 1)</a></li>
+                }
+                else
+                {
+                    <li><a href="@Url.Action("Tickets", new {pageNum = i, sort = ViewData["ToSort"]})">@(i + 1)</a></li>
+                }
             }
         </ul>
         @foreach (var item in Model)
@@ -51,6 +58,6 @@
 
 <div class="col-md-6">
     <ul class="filter-options">
-        <li><a href="@Url.Action("Tickets", new { sort = 1})">Sort by type</a></li>
+        <li><a href="@Url.Action("Tickets", new { sort = 1, pageNum = ViewData["CurrentPage"]})">Sort by type</a></li>
     </ul>
 </div>

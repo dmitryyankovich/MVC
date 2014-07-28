@@ -49,8 +49,7 @@
             </dd>
         </dl>
         <p>
-            @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-            @Html.ActionLink("Back to List", "Index", "Home")
+            @Html.ActionLink("Edit", "Edit", new {id = Model.Id})
         </p>
 
         @using (Ajax.BeginForm("UserTickets", "Ticket", new AjaxOptions { UpdateTargetId = "ticketsPartial" }))

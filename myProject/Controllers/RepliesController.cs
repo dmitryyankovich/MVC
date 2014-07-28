@@ -103,7 +103,7 @@ namespace myProject.Controllers
             {
                 return HttpNotFound();
             }
-            return View(reply);
+            return PartialView(reply);
         }
 
         // POST: Replies/Delete/5
@@ -111,9 +111,9 @@ namespace myProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            _unitOfWork.TicketRepository.Delete(id);
+            _unitOfWork.RepliesRepository.Delete(id);
             _unitOfWork.Save();
-            return RedirectToAction("Index");
+            return RedirectToAction("Details","Ticket",new {id = id});
         }
     }
 }

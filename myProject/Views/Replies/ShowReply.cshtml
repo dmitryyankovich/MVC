@@ -2,8 +2,8 @@
 @model myProject.Models.Replies
 
 <div id="message">
-    <h4>@Model.User.UserName said</h4>
+    <h4><a href="@Url.Action("ViewProfile","Account", new {id = Model.UserId})">@Model.User.UserName said</a></h4>
     <h6>@Model.Time</h6>
-    @Html.TextAreaFor(model => model.Message,new {@readonly="readonly"})
+    @Html.TextAreaFor(model => model.Message, new { @readonly = "readonly" })
 </div>
 

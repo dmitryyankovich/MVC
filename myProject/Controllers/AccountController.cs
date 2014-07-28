@@ -16,6 +16,8 @@ namespace myProject.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        private readonly UnitOfWork _unitOfWork = new UnitOfWork();
+
         public AccountController()
             : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>(new ApplicationDbContext())))
         {
@@ -80,6 +82,10 @@ namespace myProject.Controllers
             if (ModelState.IsValid)
             {
                 var user = new User() { UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City};
+                if (model.Avatar == null)
+                {
+                    user.Avatar = "/Content/img/default_avatar.gif";
+                }
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -127,11 +133,10 @@ namespace myProject.Controllers
                 : "";
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
-
-            var _unitOfWork = new UnitOfWork();
             var currentUser = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId()));
             var model = new ManageUserViewModel()
             {
+                Id = currentUser.Id,
                 Firstname = currentUser.Firstname,
                 Surname = currentUser.Surname,
                 UserName = currentUser.UserName,
@@ -146,9 +151,32 @@ namespace myProject.Controllers
 
         public ActionResult ViewProfile(int id)
         {
-            var uow = new UnitOfWork();
-            var User = uow.UserRepository.Get(id);
+            var User = _unitOfWork.UserRepository.Get(id);
             return View(User);
+        }
+
+        public ActionResult Edit(int id)
+        {
+            User user = _unitOfWork.UserRepository.Get(id);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }
+            return View(user);
+        }
+
+        // POST: Ticket/Edit/5
+        [HttpPost]
+        public ActionResult Edit([Bind(Include = "Id,Username,Firstname,Surname,Country,City,Email")] User user)
+        {
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.UserRepository.Update(user);
+                _unitOfWork.Save();
+                return RedirectToAction("Manage");
+            }
+            return View();
+
         }
 
         //

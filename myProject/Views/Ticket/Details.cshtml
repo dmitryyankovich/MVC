@@ -21,7 +21,7 @@
         @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
     }
     <dd>
-        <img src="@Model.Logo" />
+        <img src="@Model.Logo"  alt="no photo"/>
     </dd>
     <dt>
         @Html.DisplayNameFor(model => model.Content)
@@ -32,17 +32,18 @@
     </dd>
 </dl>
     <div id="message1">
-        @if (Int32.Parse(User.Identity.GetUserId()) == Model.Reply.UserId)
+        @if (Model.Reply != null && Int32.Parse(User.Identity.GetUserId()) != Model.Reply.UserId)
         {
-            @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
+            @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })    
+            @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new {id = Model.Id},new AjaxOptions{UpdateTargetId = "replyHere"})
         }
     </div>
     <div id="replyHere">
-        @if (Model.Reply == null)
+        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()))
         {
             @Ajax.ActionLink("Add reply", "Create", "Replies", new { ticketId = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
         }
-        else
+        else if(Model.Reply != null)
         {
             @Html.Action("ShowReply", "Replies", new { id = Model.Id })
         }
