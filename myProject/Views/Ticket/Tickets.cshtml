@@ -36,8 +36,9 @@
                     <p class="ticketsLocation">
                         @Html.DisplayFor(modelItem => item.User.Country), @Html.DisplayFor(modelItem => item.User.City)
                     </p>
-                    <a id="user_profile" href="@Url.Action("Manage","Account",new {id=item.UserId})">
+                    <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=item.UserId})">
                         <img class="user_thumbnail" src="@item.User.Avatar" />
+                        <h6>@item.User.UserName</h6>
                     </a>
                     <div>
                         <p>@Html.DisplayFor(modelItem => item.Content)</p>

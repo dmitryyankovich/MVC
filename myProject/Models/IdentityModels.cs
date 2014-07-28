@@ -22,6 +22,8 @@ namespace myProject.Models
         public string Avatar { get; set; }
         public virtual ICollection<Languages> Languages { get; set; } 
         public virtual ICollection<Ticket> Tickets { get; set; }
+        public virtual ICollection<Replies> Replies { get; set; }
+
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<User, int> manager)
         {
             var userIdentity = await manager.CreateIdentityAsync(

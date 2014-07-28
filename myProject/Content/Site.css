@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background: #e6e4e2
+    background: #e6e4e2;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -263,4 +263,10 @@ ul {
 .ticketsLocation {
     font-size: 15px;
     color: #00a6cf;
+}
+
+#message textarea{
+    resize: none;
+    width: 280px;
+    height: 150px;
 }

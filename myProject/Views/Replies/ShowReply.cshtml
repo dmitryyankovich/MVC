@@ -1,0 +1,8 @@
+﻿@model myProject.Models.Replies
+
+<div id="message">
+    <h4>@Model.User.UserName said</h4>
+    <h6>@Model.Time</h6>
+    @Html.TextAreaFor(model => model.Message,new {@readonly="readonly"})
+</div>
+

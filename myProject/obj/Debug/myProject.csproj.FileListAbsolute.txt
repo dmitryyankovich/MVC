@@ -171,3 +171,4 @@ D:\New folder\myProject\myProject\obj\Debug\myProject.dll
 D:\New folder\myProject\myProject\obj\Debug\myProject.pdb
 D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.ThirdCommit.resources
 c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\obj\Debug\myProject.Migrations.ThirdCommit.resources
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\obj\Debug\myProject.Migrations.FourthMigration.resources

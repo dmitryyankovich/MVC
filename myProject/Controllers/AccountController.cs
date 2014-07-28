@@ -128,8 +128,8 @@ namespace myProject.Controllers
             ViewBag.HasLocalPassword = HasPassword();
             ViewBag.ReturnUrl = Url.Action("Manage");
 
-            var uow = new UnitOfWork();
-            var currentUser = uow.UserRepository.Get(Int32.Parse(User.Identity.GetUserId()));
+            var _unitOfWork = new UnitOfWork();
+            var currentUser = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId()));
             var model = new ManageUserViewModel()
             {
                 Firstname = currentUser.Firstname,
@@ -142,6 +142,13 @@ namespace myProject.Controllers
             };
 
             return View(model);
+        }
+
+        public ActionResult ViewProfile(int id)
+        {
+            var uow = new UnitOfWork();
+            var User = uow.UserRepository.Get(id);
+            return View(User);
         }
 
         //

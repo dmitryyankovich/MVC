@@ -12,6 +12,7 @@ namespace myProject.DAL
         private MyProjectRepository<User> userRepository;
         private MyProjectRepository<Ticket> ticketRepository;
         private MyProjectRepository<Languages> languageRepository;
+        private MyProjectRepository<Replies> repliesRepository;
 
         public MyProjectRepository<User> UserRepository
         {
@@ -34,6 +35,30 @@ namespace myProject.DAL
                     ticketRepository = new MyProjectRepository<Ticket>(context);
                 }
                 return ticketRepository;
+            }
+        }
+
+        public MyProjectRepository<Languages> LanguageRepository
+        {
+            get
+            {
+                if (languageRepository == null)
+                {
+                    languageRepository = new MyProjectRepository<Languages>(context);
+                }
+                return languageRepository;
+            }
+        } 
+
+        public MyProjectRepository<Replies> RepliesRepository
+        {
+            get
+            {
+                if (repliesRepository == null)
+                {
+                    repliesRepository = new MyProjectRepository<Replies>(context);
+                }
+                return repliesRepository;
             }
         }
 
