@@ -11,26 +11,32 @@
 <div>
     <h4>@Model.Title</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=Model.UserId})">
-            <img class="user_thumbnail" src="@Model.User.Avatar" />
-            <h6>@Model.User.UserName</h6>
-        </a>
-        @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
-        {
-            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-        }
-        <dd>
-            <img src="@Model.Logo" />
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => model.Content)
-        </dt>
+<dl class="dl-horizontal">
+    <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=Model.UserId})">
+        <img class="user_thumbnail" src="@Model.User.Avatar" />
+        <h6>@Model.User.UserName</h6>
+    </a>
+    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+    }
+    <dd>
+        <img src="@Model.Logo" />
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(model => model.Content)
+    </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Content)
-        </dd>
-    </dl>
+    <dd>
+        @Html.DisplayFor(model => model.Content)
+    </dd>
+</dl>
+    <div id="message1">
+        @if (Int32.Parse(User.Identity.GetUserId()) == Model.Reply.UserId)
+        {
+            @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
+        }
+    </div>
     <div id="replyHere">
         @if (Model.Reply == null)
         {

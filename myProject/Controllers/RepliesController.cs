@@ -74,7 +74,7 @@ namespace myProject.Controllers
             {
                 return HttpNotFound();
             }
-            return View(reply);
+            return PartialView(reply);
         }
 
         // POST: Replies/Edit/5
@@ -82,13 +82,14 @@ namespace myProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TicketId,UserId,Id,Message,Time")] Replies replies)
+        public ActionResult Edit([Bind(Include = "TicketId,UserId,Message")] Replies replies)
         {
             if (ModelState.IsValid)
             {
+                replies.Time = DateTime.Now;
                 _unitOfWork.RepliesRepository.Update(replies);
                 _unitOfWork.Save();
-                return RedirectToAction("Index");
+                return RedirectToAction("ShowReply", new { id = replies.TicketId });
             }
 
             return View(replies);
