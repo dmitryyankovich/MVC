@@ -265,8 +265,12 @@ ul {
     color: #00a6cf;
 }
 
-#message textarea{
+textarea{
     resize: none;
     width: 280px;
     height: 150px;
+}
+
+#message1 a {
+    margin-right: 10px;
 }
