@@ -10,14 +10,10 @@
 <div>
     <h4>@Model.UserName</h4>
     <hr />
+    <dl class="dl-horizontal avatar">
+        <img alt="photo" src="@Model.Avatar" class="avatar" />
+    </dl>
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Avatar)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Avatar)
-        </dd>
         <dt>
             @Html.DisplayNameFor(model => model.Firstname)
         </dt>

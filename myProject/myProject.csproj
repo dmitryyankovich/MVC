@@ -161,8 +161,9 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RepliesController.cs" />
     <Compile Include="Controllers\TicketController.cs" />
+    <Compile Include="DAL\IUnitOfWork.cs" />
     <Compile Include="DAL\MyProjectRepository.cs" />
-    <Compile Include="DAL\IMyProjectRepository.cs" />
+    <Compile Include="DAL\IRepository.cs" />
     <Compile Include="DAL\UnitOfWork.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -185,6 +186,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\IdModel.cs" />
     <Compile Include="Models\Languages.cs" />
     <Compile Include="Models\Photos.cs" />
     <Compile Include="Models\Replies.cs" />

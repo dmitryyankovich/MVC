@@ -5,9 +5,8 @@ using System.Web;
 
 namespace myProject.Models
 {
-    public class Photos
+    public class Photos : IdModel
     {
-        public int Id { get; set; }
         public string Photo { get; set; }
         public virtual ICollection<Ticket> Tickets { get; set; }
     }

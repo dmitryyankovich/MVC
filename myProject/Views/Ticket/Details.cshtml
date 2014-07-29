@@ -11,28 +11,24 @@
 <div>
     <h4>@Model.Title</h4>
     <hr />
-<dl class="dl-horizontal">
-    <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=Model.UserId})">
-        <img class="user_thumbnail" src="@Model.User.Avatar" />
-        <h6>@Model.User.UserName</h6>
-    </a>
-    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
-    {
-        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
-    }
-    <dd>
-        <img src="@Model.Logo"  alt="no photo"/>
-    </dd>
-    <dt>
-        @Html.DisplayNameFor(model => model.Content)
-    </dt>
+    <dl class="dl-horizontal">
+        <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=Model.UserId})">
+            <h6>@Model.User.UserName</h6>
+            <img class="user_thumbnail" src="@Model.User.Avatar" />
+        </a>
+        <dd>
+            <img src="@Model.Logo" alt="no photo" />
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
 
-    <dd>
-        @Html.DisplayFor(model => model.Content)
-    </dd>
-</dl>
+        <dd>
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+    </dl>
     <div id="message1">
-        @if (Model.Reply != null && Int32.Parse(User.Identity.GetUserId()) != Model.Reply.UserId || Int32.Parse(User.Identity.GetUserId()) == Model.Reply.UserId)
+        @if (Model.Reply != null && (Int32.Parse(User.Identity.GetUserId()) == Model.Reply.UserId || Int32.Parse(User.Identity.GetUserId())== Model.UserId))
         {
             @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
             @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new {id = Model.Id},new AjaxOptions{UpdateTargetId = "replyHere"})
@@ -50,5 +46,10 @@
     </div>
 </div>
 <p>
+    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
+    {
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        @Html.Raw(" |")
+    }
     @Html.ActionLink("Back to List", "Tickets")
 </p>

@@ -232,3 +232,4 @@ D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.Migrations.FourthMigration
 D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.csproj.GenerateResource.Cache
 D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.dll
 D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.pdb
+D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.FourthMigration.resources

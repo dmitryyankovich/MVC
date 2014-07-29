@@ -6,9 +6,10 @@ using myProject.Models;
 
 namespace myProject.DAL
 {
-    public class UnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private ApplicationDbContext context = new ApplicationDbContext();
+        private bool isDisposed;
         private MyProjectRepository<User> userRepository;
         private MyProjectRepository<Ticket> ticketRepository;
         private MyProjectRepository<Replies> repliesRepository;
@@ -49,9 +50,32 @@ namespace myProject.DAL
             }
         }
 
-        public void Save()
+        public void Commit()
         {
             context.SaveChanges();
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        protected virtual void Dispose(bool disposing)
+        {
+            if (!isDisposed)
+            {
+                if (disposing)
+                {
+                    context.Dispose();
+                }
+            }
+            isDisposed = true;
+        }
+
+        ~UnitOfWork()
+        {
+            Dispose(false);
         }
     }
 }

@@ -9,7 +9,7 @@ using myProject.Models;
 
 namespace myProject.DAL
 {
-    public class MyProjectRepository<T> : IMyProjectRepository<T> where T:class
+    public class MyProjectRepository<T> : IRepository<T> where T:class
     {
         internal ApplicationDbContext context;
         internal DbSet<T> dbSet;

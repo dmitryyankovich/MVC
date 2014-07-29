@@ -5,7 +5,7 @@ using System.Web;
 
 namespace myProject.DAL
 {
-    public interface IMyProjectRepository<T> where T:class
+    public interface IRepository<T> where T:class
     {
         void Insert(T entity);
         void Delete(int id);

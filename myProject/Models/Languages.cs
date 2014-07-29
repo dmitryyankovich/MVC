@@ -5,9 +5,8 @@ using System.Web;
 
 namespace myProject.Models
 {
-    public class Languages
+    public class Languages : IdModel
     {
-        public int Id { get; set; }
         public string Language { get; set; }
         public virtual ICollection<User> Users { get; set; }
     }

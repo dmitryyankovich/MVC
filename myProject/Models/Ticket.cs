@@ -6,9 +6,8 @@ using System.Web;
 
 namespace myProject.Models
 {
-    public class Ticket
+    public class Ticket : IdModel
     {
-        public int Id { get; set; }
         public int UserId { get; set; }
         public string Title { get; set; }
         public string Logo { get; set; }

@@ -52,7 +52,7 @@ namespace myProject.Controllers
                     UserId = replyModel.UserId
                 };
                 _unitOfWork.RepliesRepository.Insert(reply);
-                _unitOfWork.Save();
+                _unitOfWork.Commit();
                 return RedirectToAction("ShowReply",new {id = reply.TicketId});
                 //return PartialView("HaveReply");
             }
@@ -88,7 +88,7 @@ namespace myProject.Controllers
             {
                 replies.Time = DateTime.Now;
                 _unitOfWork.RepliesRepository.Update(replies);
-                _unitOfWork.Save();
+                _unitOfWork.Commit();
                 return RedirectToAction("ShowReply", new { id = replies.TicketId });
             }
 
@@ -112,7 +112,7 @@ namespace myProject.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             _unitOfWork.RepliesRepository.Delete(id);
-            _unitOfWork.Save();
+            _unitOfWork.Commit();
             return RedirectToAction("Details","Ticket",new {id = id});
         }
     }

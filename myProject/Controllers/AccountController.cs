@@ -172,7 +172,7 @@ namespace myProject.Controllers
             if (ModelState.IsValid)
             {
                 _unitOfWork.UserRepository.Update(user);
-                _unitOfWork.Save();
+                _unitOfWork.Commit();
                 return RedirectToAction("Manage");
             }
             return View();

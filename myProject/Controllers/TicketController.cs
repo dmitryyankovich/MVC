@@ -68,7 +68,7 @@ namespace myProject.Controllers
             {
                 ticket.UserId = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Id;
                 _unitOfWork.TicketRepository.Insert(ticket);
-                _unitOfWork.Save();
+                _unitOfWork.Commit();
                 return RedirectToAction("Tickets");
             }
             return View();
@@ -92,7 +92,7 @@ namespace myProject.Controllers
             if (ModelState.IsValid)
             {
                 _unitOfWork.TicketRepository.Update(ticket);
-                _unitOfWork.Save();
+                _unitOfWork.Commit();
                 return RedirectToAction("Tickets");
             }
             return View();
@@ -115,7 +115,7 @@ namespace myProject.Controllers
         public ActionResult Delete(int id, FormCollection collection)
         {
             _unitOfWork.TicketRepository.Delete(id);
-            _unitOfWork.Save();
+            _unitOfWork.Commit();
             return RedirectToAction("Tickets");
         }
     }
