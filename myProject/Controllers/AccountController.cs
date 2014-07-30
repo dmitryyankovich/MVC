@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using myProject.Models;
 using myProject.DAL;
+using myProject.Models.ViewModels;
 
 namespace myProject.Controllers
 {

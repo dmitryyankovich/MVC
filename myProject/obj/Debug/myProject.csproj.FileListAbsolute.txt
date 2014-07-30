@@ -233,3 +233,12 @@ D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.csproj.GenerateResource.Ca
 D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.dll
 D:\Dmitry Yankovich\MVC\myProject\obj\Debug\myProject.pdb
 D:\New folder\myProject\myProject\obj\Debug\myProject.Migrations.FourthMigration.resources
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\DAL.dll
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\DAL.pdb
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.dll
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.Web.Common.dll
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.Web.Mvc.dll
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\WebActivatorEx.dll
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.xml
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.Web.Common.xml
+c:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\myProject\bin\Ninject.Web.Mvc.xml
