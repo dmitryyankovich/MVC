@@ -2,76 +2,57 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using myProject.Models;
+using DAL.Interfaces;
+using DAL.Models;
 
-namespace myProject.DAL
+namespace DAL.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private ApplicationDbContext context = new ApplicationDbContext();
-        private bool isDisposed;
-        private readonly IRepository<User> userRepository;
-        private readonly IRepository<Ticket> ticketRepository;
-        private readonly IRepository<Languages> languagesRepository;
-        private readonly IRepository<Replies> repliesRepository;
-
-        public UnitOfWork() { }
+        private readonly IDbContext _context;
+        private readonly IRepository<User> _userRepository;
+        private readonly IRepository<Ticket> _ticketRepository;
+        private readonly IRepository<Languages> _languagesRepository;
+        private readonly IRepository<Replies> _repliesRepository;
 
         public UnitOfWork(IRepository<User> userRepInstance, IRepository<Ticket> ticketRepInstance,
-            IRepository<Languages> languageRepInstance, IRepository<Replies> repliesRepInstance)
+            IRepository<Languages> languageRepInstance, IRepository<Replies> repliesRepInstance, IDbContext contextInstance)
         {
-            userRepository = userRepInstance;
-            ticketRepository = ticketRepInstance;
-            languagesRepository = languageRepInstance;
-            repliesRepository = repliesRepInstance; 
+            _context = contextInstance;
+            _userRepository = userRepInstance;
+            _ticketRepository = ticketRepInstance;
+            _languagesRepository = languageRepInstance;
+            _repliesRepository = repliesRepInstance;
         }
 
         public IRepository<User> UserRepository
         {
-            get { return userRepository; }
+            get { return _userRepository; }
         }
 
         public IRepository<Ticket> TicketRepository
         {
-            get { return ticketRepository; }
+            get { return _ticketRepository; }
         }
 
         public IRepository<Languages> LanguagesRepository
         {
-            get { return languagesRepository; }
+            get { return _languagesRepository; }
         }
 
         public IRepository<Replies> RepliesRepository
         {
-            get { return repliesRepository; }
+            get { return _repliesRepository; }
+        }
+
+        public IDbContext Context
+        {
+            get { return _context; }
         }
 
         public void Commit()
         {
-            context.SaveChanges();
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!isDisposed)
-            {
-                if (disposing)
-                {
-                    context.Dispose();
-                }
-            }
-            isDisposed = true;
-        }
-
-        ~UnitOfWork()
-        {
-            Dispose(false);
+            _context.SaveAll();
         }
     }
 }

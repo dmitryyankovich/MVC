@@ -1,9 +1,18 @@
 ﻿@using Microsoft.AspNet.Identity
-@model myProject.Models.Replies
+@model DAL.Models.Replies
 
-<div id="message">
-    <h4><a href="@Url.Action("ViewProfile","Account", new {id = Model.UserId})">@Model.User.UserName said</a></h4>
-    <h6>@Model.Time</h6>
-    @Html.TextAreaFor(model => model.Message, new { @readonly = "readonly" })
-</div>
-
+@if (Model != null)
+{
+    <div id="message">
+        <div id="message1">
+            @if (Model.UserId == Int32.Parse(User.Identity.GetUserId()))
+            {
+                @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { ticketId = Model.TicketId }, new AjaxOptions { UpdateTargetId = "message1" })
+                @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new { ticketId = Model.TicketId }, new AjaxOptions { UpdateTargetId = "message1"})
+            }
+        </div>
+        <h4><a href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">@Model.User.UserName said</a></h4>
+        <h6>@Model.Time</h6>
+        @Html.TextAreaFor(model => model.Message, new { @readonly = "readonly" })
+    </div>
+}

@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model myProject.Models.Ticket
+@model DAL.Models.Ticket
 
 @{
     ViewBag.Title = "Details";
@@ -27,15 +27,8 @@
             @Html.DisplayFor(model => model.Content)
         </dd>
     </dl>
-    <div id="message1">
-        @if (Model.Reply != null && (Int32.Parse(User.Identity.GetUserId()) == Model.Reply.UserId || Int32.Parse(User.Identity.GetUserId())== Model.UserId))
-        {
-            @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
-            @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new {id = Model.Id},new AjaxOptions{UpdateTargetId = "replyHere"})
-        }
-    </div>
     <div id="replyHere">
-        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()))
+        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()) )
         {
             @Ajax.ActionLink("Add reply", "Create", "Replies", new { ticketId = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
         }

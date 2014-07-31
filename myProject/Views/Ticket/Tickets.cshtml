@@ -1,5 +1,4 @@
-﻿@using System.Web.UI.HtmlControls
-@model IEnumerable<myProject.Models.Ticket>
+﻿@model IEnumerable<DAL.Models.Ticket>
 
 @{
     ViewBag.Title = "Tickets";
@@ -47,9 +46,6 @@
                         <img class="user_thumbnail" src="@item.User.Avatar" />
                         <h6>@item.User.UserName</h6>
                     </a>
-                    <div>
-                        <p>@Html.DisplayFor(modelItem => item.Content)</p>
-                    </div>
                 </div>
             </li>
         }

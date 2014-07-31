@@ -6,15 +6,22 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity;
-using myProject.DAL;
 using myProject.Models;
 
 namespace myProject.Controllers
 {
+    [Authorize]
     public class RepliesController : Controller
     {
-        private readonly UnitOfWork _unitOfWork = new UnitOfWork();
+        private readonly IUnitOfWork _unitOfWork;
+
+        public RepliesController(IUnitOfWork uowInstance)
+        {
+            _unitOfWork = uowInstance;
+        }
 
         // GET: Replies
         public ActionResult Index()
@@ -41,7 +48,6 @@ namespace myProject.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "TicketId,UserId,Message")] Replies replyModel)
         {
-
             if (ModelState.IsValid)
             {
                 Replies reply = new Replies
@@ -53,7 +59,7 @@ namespace myProject.Controllers
                 };
                 _unitOfWork.RepliesRepository.Insert(reply);
                 _unitOfWork.Commit();
-                return RedirectToAction("ShowReply",new {id = reply.TicketId});
+                return RedirectToAction("ShowReply", new { id = reply.TicketId });
                 //return PartialView("HaveReply");
             }
             return PartialView("Create");
@@ -113,7 +119,7 @@ namespace myProject.Controllers
         {
             _unitOfWork.RepliesRepository.Delete(id);
             _unitOfWork.Commit();
-            return RedirectToAction("Details","Ticket",new {id = id});
+            return RedirectToAction("Details", "Ticket", new { id = id });
         }
     }
 }

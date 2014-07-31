@@ -2,54 +2,56 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Runtime.Remoting.Contexts;
 using System.Web;
 using System.Web.Mvc;
-using myProject.Models;
+using DAL.Interfaces;
 
-namespace myProject.DAL
+
+namespace DAL.Repositories
 {
-    public class MyProjectRepository<T> : IRepository<T> where T:class
+    public abstract class MyProjectRepository<T> : IRepository<T> where T : class
     {
-        internal ApplicationDbContext context;
-        internal DbSet<T> dbSet;
+        internal IDbContext Context;
+        internal IDbSet<T> DbSet;
 
-        public MyProjectRepository(ApplicationDbContext context)
+        protected MyProjectRepository(IDbContext context, Func<IDbContext, IDbSet<T>> dbSetSelector)
         {
-            this.context = context;
-            this.dbSet = context.Set<T>();
+            Context = context;
+            DbSet = dbSetSelector(context);
         }
 
         public void Insert(T entity)
         {
-            dbSet.Add(entity);
+            DbSet.Add(entity);
         }
 
         public void Delete(int id)
         {
-            var entity = dbSet.Find(id);
-            dbSet.Attach(entity);
-            dbSet.Remove(entity);
+            var entity = DbSet.Find(id);
+            DbSet.Attach(entity);
+            DbSet.Remove(entity);
         }
 
         public void Update(T entity)
         {
-            dbSet.Attach(entity);
-            context.Entry(entity).State = EntityState.Modified;
+            DbSet.Attach(entity);
+            Context.Flag(entity);
         }
 
         public T Get(int id)
         {
-            return dbSet.Find(id);
+            return DbSet.Find(id);
         }
 
         public IEnumerable<T> GetAll()
         {
-            return dbSet.ToList();
+            return DbSet;
         }
 
-       public void Save()
-       {
-           context.SaveChanges();
-       }
+        public void Save()
+        {
+            Context.SaveAll();
+        }
     }
 }

@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace myProject.Models
+namespace DAL.Models
 {
     public class Replies
     {

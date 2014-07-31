@@ -3,24 +3,33 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity;
-using myProject.DAL;
+using Microsoft.AspNet.Identity.EntityFramework;
 using myProject.Models;
 
 namespace myProject.Controllers
 {
+    [Authorize]
     public class TicketController : Controller
     {
 
-        private readonly UnitOfWork _unitOfWork = new UnitOfWork();
+        private readonly IUnitOfWork _unitOfWork;
+
+        public TicketController(IUnitOfWork uowInstance)
+        {
+            _unitOfWork = uowInstance;
+        }
         // GET: Ticket
         public ActionResult UserTickets()
         {
             var tickets = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Tickets.ToList();
-            return PartialView(tickets);
+            return PartialView(tickets.ToList());
         }
 
-        public ActionResult Tickets(int sort = 0,int pageNum = 0)
+        [AllowAnonymous]
+        public ActionResult Tickets(int sort = 0, int pageNum = 0)
         {
             IEnumerable<Ticket> tickets;
             if (sort == 0)
@@ -35,11 +44,11 @@ namespace myProject.Controllers
             int ticketCount = tickets.Count();
             tickets = tickets.Skip(5 * pageNum).Take(5);
             int ticketsPageNum = 0;
-            ticketsPageNum = ticketCount%5 != 0 ? (ticketCount/5 + 1) : ticketCount/5;
+            ticketsPageNum = ticketCount % 5 != 0 ? (ticketCount / 5 + 1) : ticketCount / 5;
             ViewData["TicketsPageNum"] = ticketsPageNum;
             ViewData["ToSort"] = sort;
             ViewData["CurrentPage"] = pageNum;
-            return View(tickets);
+            return View(tickets.ToList());
         }
 
 

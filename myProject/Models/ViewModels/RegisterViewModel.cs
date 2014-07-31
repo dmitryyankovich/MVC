@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
+using DAL.Models;
 
 namespace myProject.Models.ViewModels
 {
@@ -17,7 +18,11 @@ namespace myProject.Models.ViewModels
         [Required]
         public string Country { get; set; }
 
+
         public string Avatar { get; set; }
+
+        [Display(Name = "Language")]
+        public IEnumerable<string> Languages { get; set; }
 
         [Required]
         public string City { get; set; }

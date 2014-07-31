@@ -40,3 +40,18 @@ C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Ent
 C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\myProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\myProject\DAL\obj\Debug\DAL.dll
+F:\myProject\DAL\obj\Debug\DAL.pdb
+F:\myProject\DAL\bin\Debug\DAL.dll.config
+F:\myProject\DAL\bin\Debug\DAL.dll
+F:\myProject\DAL\bin\Debug\DAL.pdb
+F:\myProject\DAL\bin\Debug\EntityFramework.dll
+F:\myProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\myProject\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\myProject\DAL\bin\Debug\EntityFramework.xml
+F:\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

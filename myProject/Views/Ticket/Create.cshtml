@@ -1,4 +1,4 @@
-﻿@model myProject.Models.Ticket
+﻿@model DAL.Models.Ticket
 
 @{
     ViewBag.Title = "Create";
@@ -41,7 +41,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.TypeOfTicket, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownListFor(model => model.TypeOfTicket, new SelectList(Enum.GetValues(typeof(myProject.Models.TypeOfTicket))))
+                @Html.DropDownListFor(model => model.TypeOfTicket, new SelectList(Enum.GetValues(typeof(DAL.Models.TypeOfTicket))))
                 @Html.ValidationMessageFor(model => model.TypeOfTicket)
             </div>
         </div>

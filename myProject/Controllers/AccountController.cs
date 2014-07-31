@@ -5,11 +5,12 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using myProject.Models;
-using myProject.DAL;
 using myProject.Models.ViewModels;
 
 namespace myProject.Controllers
@@ -17,10 +18,16 @@ namespace myProject.Controllers
     [Authorize]
     public class AccountController : Controller
     {
-        private readonly UnitOfWork _unitOfWork = new UnitOfWork();
+        private readonly IUnitOfWork _unitOfWork;
+
+        public AccountController(IUnitOfWork uowInstance)
+            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>((DbContext)uowInstance.Context)))
+        {
+            _unitOfWork = uowInstance;
+        }
 
         public AccountController()
-            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>(new ApplicationDbContext())))
+            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>(new DbContext())))
         {
         }
 
@@ -65,11 +72,21 @@ namespace myProject.Controllers
             return View(model);
         }
 
-            //
+        private MultiSelectList GetLanguages(IEnumerable<string> selectedValues)
+        {
+            var languages = _unitOfWork.LanguagesRepository.GetAll();
+            return new MultiSelectList(languages, "Id", "Language", selectedValues);
+        }
+        //
         // GET: /Account/Register
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var selectedLanguage = _unitOfWork.LanguagesRepository.GetAll().First();
+            ViewBag.LanguagesList = GetLanguages(new List<string>()
+            { 
+                selectedLanguage.Id.ToString()
+            });
             return View();
         }
 
@@ -82,7 +99,9 @@ namespace myProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User() { UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City};
+                var lan = _unitOfWork.LanguagesRepository.GetAll().Where(x => model.Languages.Contains(x.Id.ToString())).ToList();
+
+                var user = new User() { Languages =  lan,UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
                 if (model.Avatar == null)
                 {
                     user.Avatar = "/Content/img/default_avatar.gif";
@@ -242,32 +261,32 @@ namespace myProject.Controllers
             return new ChallengeResult(provider, Url.Action("ExternalLoginCallback", "Account", new { ReturnUrl = returnUrl }));
         }
 
-        //
-        // GET: /Account/ExternalLoginCallback
-        [AllowAnonymous]
-        public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
-        {
-            var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
-            if (loginInfo == null)
-            {
-                return RedirectToAction("Login");
-            }
+        ////
+        //// GET: /Account/ExternalLoginCallback
+        //[AllowAnonymous]
+        //public async Task<ActionResult> ExternalLoginCallback(string returnUrl)
+        //{
+        //    var loginInfo = await AuthenticationManager.GetExternalLoginInfoAsync();
+        //    if (loginInfo == null)
+        //    {
+        //        return RedirectToAction("Login");
+        //    }
 
-            // Sign in the user with this external login provider if the user already has a login
-            var user = await UserManager.FindAsync(loginInfo.Login);
-            if (user != null)
-            {
-                await SignInAsync(user, isPersistent: false);
-                return RedirectToLocal(returnUrl);
-            }
-            else
-            {
-                // If the user does not have an account, then prompt the user to create an account
-                ViewBag.ReturnUrl = returnUrl;
-                ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
-                return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { UserName = loginInfo.DefaultUserName });
-            }
-        }
+        //    // Sign in the user with this external login provider if the user already has a login
+        //    var user = await UserManager.FindAsync(loginInfo.Login);
+        //    if (user != null)
+        //    {
+        //        await SignInAsync(user, isPersistent: false);
+        //        return RedirectToLocal(returnUrl);
+        //    }
+        //    else
+        //    {
+        //        // If the user does not have an account, then prompt the user to create an account
+        //        ViewBag.ReturnUrl = returnUrl;
+        //        ViewBag.LoginProvider = loginInfo.Login.LoginProvider;
+        //        return View("ExternalLoginConfirmation", new ExternalLoginConfirmationViewModel { UserName = loginInfo.DefaultUserName });
+        //    }
+        //}
 
         //
         // POST: /Account/LinkLogin
@@ -294,44 +313,6 @@ namespace myProject.Controllers
                 return RedirectToAction("Manage");
             }
             return RedirectToAction("Manage", new { Message = ManageMessageId.Error });
-        }
-
-        //
-        // POST: /Account/ExternalLoginConfirmation
-        [HttpPost]
-        [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> ExternalLoginConfirmation(ExternalLoginConfirmationViewModel model, string returnUrl)
-        {
-            if (User.Identity.IsAuthenticated)
-            {
-                return RedirectToAction("Manage");
-            }
-
-            if (ModelState.IsValid)
-            {
-                // Get the information about the user from the external login provider
-                var info = await AuthenticationManager.GetExternalLoginInfoAsync();
-                if (info == null)
-                {
-                    return View("ExternalLoginFailure");
-                }
-                var user = new User() { UserName = model.UserName };
-                var result = await UserManager.CreateAsync(user);
-                if (result.Succeeded)
-                {
-                    result = await UserManager.AddLoginAsync(user.Id, info.Login);
-                    if (result.Succeeded)
-                    {
-                        await SignInAsync(user, isPersistent: false);
-                        return RedirectToLocal(returnUrl);
-                    }
-                }
-                AddErrors(result);
-            }
-
-            ViewBag.ReturnUrl = returnUrl;
-            return View(model);
         }
 
         //

@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace myProject.Models
+namespace DAL.Models
 {
     // You can add profile data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class User : IdentityUser<int, CustomUserLogin, CustomUserRole, CustomUserClaim>
@@ -51,16 +51,4 @@ namespace myProject.Models
     public class CustomUserRole : IdentityUserRole<int> { }
     public class CustomUserClaim : IdentityUserClaim<int> { }
     public class CustomUserLogin : IdentityUserLogin<int> { }
-
-    public class ApplicationDbContext : IdentityDbContext<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>
-    {
-        public ApplicationDbContext()
-            : base("DefaultConnection")
-        {
-        }
-        public DbSet<Ticket> Tickets { get; set; }
-        public DbSet<Languages> Languages { get; set; }
-        public DbSet<Replies> Replies { get; set; }
-    }
-
 }
