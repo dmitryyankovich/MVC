@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -21,13 +22,13 @@ namespace myProject.Controllers
         private readonly IUnitOfWork _unitOfWork;
 
         public AccountController(IUnitOfWork uowInstance)
-            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>((DbContext)uowInstance.Context)))
+            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>((DbContext)uowInstance)))
         {
             _unitOfWork = uowInstance;
         }
 
         public AccountController()
-            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>(new DbContext())))
+            : this(new UserManager<User, int>(new UserStore<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>(new DbContext("ctx"))))
         {
         }
 

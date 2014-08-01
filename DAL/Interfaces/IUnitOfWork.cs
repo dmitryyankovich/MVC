@@ -14,7 +14,6 @@ namespace DAL.Interfaces
         IRepository<Ticket> TicketRepository { get; }
         IRepository<Languages> LanguagesRepository { get; }
         IRepository<Replies> RepliesRepository { get; }
-        IDbContext Context { get; }
         void Commit();
     }
 }

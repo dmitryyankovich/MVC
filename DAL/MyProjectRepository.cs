@@ -8,22 +8,20 @@ using DAL.Interfaces;
 
 namespace DAL.Repositories
 {
-    public abstract class MyProjectRepository<T> : IRepository<T> where T : class
+    public class MyProjectRepository<T> : IRepository<T> where T : class
     {
-        private readonly IDbContext context;
-        private readonly IDbSet<T> dbSet;
+        private IDbSet<T> DbSet;
 
-        protected MyProjectRepository(IDbContext ctx, Func<IDbContext, IDbSet<T>> dbSetSelector)
+        public MyProjectRepository(IDbSet<T> dbSet)
         {
-            context = ctx;
-            dbSet = dbSetSelector(context);
+            DbSet = dbSet;
         }
 
         public void Insert(T entity)
         {
             if (entity != null)
             {
-                dbSet.Add(entity);
+                DbSet.Add(entity);
             }
             else
             {
@@ -33,11 +31,10 @@ namespace DAL.Repositories
 
         public void Delete(int id)
         {
-            var entity = dbSet.Find(id);
+            var entity = DbSet.Find(id);
             if (entity != null)
             {
-                dbSet.Attach(entity);
-                dbSet.Remove(entity);
+                DbSet.Remove(entity);
             }
             else
             {
@@ -49,14 +46,13 @@ namespace DAL.Repositories
         {
             if (entity != null)
             {
-                dbSet.Attach(entity);
-                context.Flag(entity);
+                DbSet.Attach(entity);
             }
         }
 
         public T Get(int id)
         {
-            var entity = dbSet.Find(id);
+            var entity = DbSet.Find(id);
             if (entity != null)
             {
                 return entity;
@@ -69,7 +65,7 @@ namespace DAL.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            var entities = dbSet;
+            var entities = DbSet;
             if (entities != null)
             {
                 return entities;

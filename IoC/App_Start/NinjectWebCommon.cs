@@ -66,12 +66,7 @@ namespace myProject
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IDbContext>().To<DbContext>().InRequestScope();
             kernel.Bind<IUnitOfWork>().To<UnitOfWork>().InRequestScope();
-            kernel.Bind<IRepository<User>>().To<UserRepository>().InRequestScope();
-            kernel.Bind<IRepository<Ticket>>().To<TicketRepository>().InRequestScope();
-            kernel.Bind<IRepository<Languages>>().To<LanguagesRepository>().InRequestScope();
-            kernel.Bind<IRepository<Replies>>().To<RepliesRepository>().InRequestScope();
         }
     }
 }

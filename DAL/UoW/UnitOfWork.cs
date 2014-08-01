@@ -1,59 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using DAL.Interfaces;
 using DAL.Models;
 using DAL.Repositories;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 
 namespace DAL.UoW
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork : IdentityDbContext<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>, IUnitOfWork
     {
-        private readonly IDbContext _context;
-        private readonly UserRepository _userRepository;
-        private readonly TicketRepository _ticketRepository;
-        private readonly LanguagesRepository _languagesRepository;
-        private readonly RepliesRepository _repliesRepository;
 
-        public UnitOfWork(UserRepository userRepInstance, TicketRepository ticketRepInstance,
-            LanguagesRepository languageRepInstance, RepliesRepository repliesRepInstance, IDbContext contextInstance)
+        public UnitOfWork()
+            : base("DefaultConnection")
         {
-            _context = contextInstance;
-            _userRepository = userRepInstance;
-            _ticketRepository = ticketRepInstance;
-            _languagesRepository = languageRepInstance;
-            _repliesRepository = repliesRepInstance;
+
         }
+
+        private MyProjectRepository<User> userRepository;
+        private MyProjectRepository<Ticket> ticketRepository;
+        private MyProjectRepository<Languages> languagesRepository;
+        private MyProjectRepository<Replies> repliesRepository;
+
+        public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<Languages> Languages { get; set; }
+        public DbSet<Replies> Replies { get; set; }
 
         public IRepository<User> UserRepository
         {
-            get { return _userRepository; }
+            get { return userRepository ?? (userRepository = new MyProjectRepository<User>(Users));}
         }
 
         public IRepository<Ticket> TicketRepository
         {
-            get { return _ticketRepository; }
+            get { return ticketRepository ?? (ticketRepository = new MyProjectRepository<Ticket>(Tickets)); }
         }
 
         public IRepository<Languages> LanguagesRepository
         {
-            get { return _languagesRepository; }
+            get { return languagesRepository ?? (languagesRepository = new MyProjectRepository<Languages>(Languages)); }
         }
 
         public IRepository<Replies> RepliesRepository
         {
-            get { return _repliesRepository; }
-        }
-
-        public IDbContext Context
-        {
-            get { return _context; }
+            get { return repliesRepository ?? (repliesRepository = new MyProjectRepository<Replies>(Replies)); }
         }
 
         public void Commit()
         {
-            _context.SaveAll();
+            SaveChanges();
         }
     }
 }
