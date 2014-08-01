@@ -57,3 +57,20 @@ C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Mic
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\obj\Debug\DAL.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\obj\Debug\DAL.pdb
+D:\New folder\MVC-master\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\New folder\MVC-master\DAL\obj\Debug\DAL.dll
+D:\New folder\MVC-master\DAL\obj\Debug\DAL.pdb
+D:\New folder\MVC-master\DAL\bin\Debug\DAL.dll.config
+D:\New folder\MVC-master\DAL\bin\Debug\DAL.dll
+D:\New folder\MVC-master\DAL\bin\Debug\DAL.pdb
+D:\New folder\MVC-master\DAL\bin\Debug\EntityFramework.dll
+D:\New folder\MVC-master\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder\MVC-master\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\MVC-master\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\MVC-master\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\New folder\MVC-master\DAL\bin\Debug\Project1.dll
+D:\New folder\MVC-master\DAL\bin\Debug\Project1.pdb
+D:\New folder\MVC-master\DAL\bin\Debug\EntityFramework.xml
+D:\New folder\MVC-master\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder\MVC-master\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\MVC-master\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml

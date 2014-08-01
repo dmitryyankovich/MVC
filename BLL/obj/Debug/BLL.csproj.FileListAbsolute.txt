@@ -13,3 +13,18 @@ C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\Mic
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\DAL.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\DAL.pdb
+D:\New folder\MVC-master\BLL\bin\Debug\DAL.dll.config
+D:\New folder\MVC-master\BLL\bin\Debug\DAL.dll
+D:\New folder\MVC-master\BLL\bin\Debug\DAL.pdb
+D:\New folder\MVC-master\BLL\bin\Debug\EntityFramework.dll
+D:\New folder\MVC-master\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder\MVC-master\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\MVC-master\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\MVC-master\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\New folder\MVC-master\BLL\bin\Debug\EntityFramework.xml
+D:\New folder\MVC-master\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder\MVC-master\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\MVC-master\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\MVC-master\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\New folder\MVC-master\BLL\obj\Debug\DAL.dll
+D:\New folder\MVC-master\BLL\obj\Debug\DAL.pdb

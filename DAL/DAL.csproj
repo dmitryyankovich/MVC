@@ -93,7 +93,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Project1\BO.csproj">
+    <ProjectReference Include="..\BO\BO.csproj">
       <Project>{ba365cf0-0dc7-4694-aa4b-71c22fb88620}</Project>
       <Name>BO</Name>
     </ProjectReference>
