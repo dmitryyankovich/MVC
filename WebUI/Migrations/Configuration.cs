@@ -1,4 +1,4 @@
-using BO.Models;
+using DAL.Models;
 
 namespace myProject.Migrations
 {
@@ -7,14 +7,14 @@ namespace myProject.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<global::BO.Models.DbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<global::DAL.Models.DbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(global::BO.Models.DbContext context)
+        protected override void Seed(global::DAL.Models.DbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

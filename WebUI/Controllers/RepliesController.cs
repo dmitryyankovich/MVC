@@ -6,8 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using BO.Interfaces;
-using BO.Models;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity;
 using myProject.Models;
 

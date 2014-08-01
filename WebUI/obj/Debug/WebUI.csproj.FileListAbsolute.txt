@@ -94,7 +94,6 @@ D:\New folder\MVC\WebUI\bin\Ninject.dll
 D:\New folder\MVC\WebUI\bin\Ninject.Web.Common.dll
 D:\New folder\MVC\WebUI\bin\Ninject.Web.Mvc.dll
 D:\New folder\MVC\WebUI\bin\Owin.dll
-D:\New folder\MVC\WebUI\bin\Project1.dll
 D:\New folder\MVC\WebUI\bin\System.Web.Helpers.dll
 D:\New folder\MVC\WebUI\bin\System.Web.Mvc.dll
 D:\New folder\MVC\WebUI\bin\System.Web.Optimization.dll
@@ -106,7 +105,6 @@ D:\New folder\MVC\WebUI\bin\WebActivatorEx.dll
 D:\New folder\MVC\WebUI\bin\WebGrease.dll
 D:\New folder\MVC\WebUI\bin\DAL.dll
 D:\New folder\MVC\WebUI\bin\IoC.pdb
-D:\New folder\MVC\WebUI\bin\Project1.pdb
 D:\New folder\MVC\WebUI\bin\Ninject.xml
 D:\New folder\MVC\WebUI\bin\Ninject.Web.Common.xml
 D:\New folder\MVC\WebUI\bin\Ninject.Web.Mvc.xml

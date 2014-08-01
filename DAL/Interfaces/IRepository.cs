@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BO.Interfaces
+namespace DAL.Interfaces
 {
     public interface IRepository<T> where T : class
     {

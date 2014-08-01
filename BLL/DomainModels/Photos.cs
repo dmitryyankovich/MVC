@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BO.Models
+namespace BLL.DomainModels
 {
     public class Photos : IdModel
     {
         public string Photo { get; set; }
-        public virtual ICollection<Ticket> Tickets { get; set; }
+        public ICollection<Ticket> Tickets { get; set; }
     }
 }

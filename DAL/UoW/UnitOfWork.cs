@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using BO.Interfaces;
-using BO.Models;
+using DAL.Interfaces;
+using DAL.Models;
 
 
-namespace BO.UoW
+namespace DAL.UoW
 {
     public class UnitOfWork : IUnitOfWork
     {

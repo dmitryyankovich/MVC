@@ -5,8 +5,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using BO.Interfaces;
-using BO.Models;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -101,7 +101,7 @@ namespace myProject.Controllers
             {
                 var languages = _unitOfWork.LanguagesRepository.GetAll().Where(m => model.Languages.Contains(m.Id.ToString())).ToList();
 
-                var user = new User() { Languages =  languages,UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
+                var user = new User() { Languages = languages, UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
                 if (model.Avatar == null)
                 {
                     user.Avatar = "/Content/img/default_avatar.gif";

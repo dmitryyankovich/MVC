@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BO.Models;
+using DAL.Interfaces;
+using DAL.Models;
 
-namespace BO.Interfaces
+namespace DAL.Interfaces
 {
     public interface IUnitOfWork
     {

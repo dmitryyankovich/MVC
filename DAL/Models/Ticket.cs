@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
-namespace BO.Models
+namespace DAL.Models
 {
     public class Ticket : IdModel
     {

@@ -4,13 +4,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BO.Interfaces;
-using BO.Models;
+using DAL.Interfaces;
+using DAL.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
 
-namespace BO.Models
+namespace DAL.Models
 {
-    public class DbContext : IdentityDbContext<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim> , IDbContext
+    public class DbContext : IdentityDbContext<User, CustomRole, int, CustomUserLogin, CustomUserRole, CustomUserClaim>, IDbContext
     {
         public DbContext()
             : base("DefaultConnection")
@@ -22,7 +22,7 @@ namespace BO.Models
 
         public void Flag(object entity)
         {
-            Entry(entity).State = EntityState.Modified;;
+            Entry(entity).State = EntityState.Modified; ;
         }
 
         public void SaveAll()

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BO.Models
+namespace DAL.Models
 {
     public class Languages : IdModel
     {

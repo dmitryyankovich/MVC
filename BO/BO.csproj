@@ -7,8 +7,8 @@
     <ProjectGuid>{BA365CF0-0DC7-4694-AA4B-71C22FB88620}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Project1</RootNamespace>
-    <AssemblyName>Project1</AssemblyName>
+    <RootNamespace>BO</RootNamespace>
+    <AssemblyName>BO</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -52,20 +52,6 @@
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="DbContext.cs" />
-    <Compile Include="Interfaces\IDbContext.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
-    <Compile Include="Interfaces\IUnitOfWork.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\IdModel.cs" />
-    <Compile Include="Models\Languages.cs" />
-    <Compile Include="Models\Photos.cs" />
-    <Compile Include="Models\Replies.cs" />
-    <Compile Include="Models\Ticket.cs" />
-    <Compile Include="MyProjectRepository.cs" />
-    <Compile Include="UoW\UnitOfWork.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

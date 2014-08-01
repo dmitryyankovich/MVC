@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Runtime.Remoting.Contexts;
-using BO.Interfaces;
+using DAL.Interfaces;
 
 
-namespace BO.Repositories
+namespace DAL.Repositories
 {
     public abstract class MyProjectRepository<T> : IRepository<T> where T : class
     {

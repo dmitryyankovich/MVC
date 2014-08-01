@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BO.Models;
+﻿using System.Data.Entity;
+using DAL.Models;
 
-namespace BO.Interfaces
+namespace DAL.Interfaces
 {
     public interface IDbContext
     {

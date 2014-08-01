@@ -9,7 +9,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 
-namespace BO.Models
+namespace DAL.Models
 {
     // You can add profile data for the user by adding more properties to your User class, please visit http://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class User : IdentityUser<int, CustomUserLogin, CustomUserRole, CustomUserClaim>

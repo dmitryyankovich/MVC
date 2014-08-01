@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model BO.Models.Ticket
+@model DAL.Models.Ticket
 
 @{
     ViewBag.Title = "Details";
@@ -11,7 +11,7 @@
     <hr />
     <dl class="dl-horizontal">
         <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
-            <h6>@Model.User.UserName</h6>
+            @Model.User.UserName
             <img class="user_thumbnail" src="@Model.User.Avatar" />
         </a>
         <dd>

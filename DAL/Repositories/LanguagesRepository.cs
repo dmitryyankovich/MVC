@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BO.Interfaces;
-using BO.Models;
-using BO.Repositories;
+using DAL.Interfaces;
+using DAL.Interfaces;
+using DAL.Models;
 
 namespace DAL.Repositories
 {

@@ -288,16 +288,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201407280726268_FourthMigration.resx">
       <DependentUpon>201407280726268_FourthMigration.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{34f389c7-0a20-4c06-aea0-2626a038291f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IoC\IoC.csproj">
       <Project>{a5b2b163-97a6-4193-a9fc-3c40ca191a01}</Project>
       <Name>IoC</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BO\BO.csproj">
-      <Project>{ba365cf0-0dc7-4694-aa4b-71c22fb88620}</Project>
-      <Name>BO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

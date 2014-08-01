@@ -1,4 +1,4 @@
-﻿@model IEnumerable<BO.Models.Ticket>
+﻿@model IEnumerable<DAL.Models.Ticket>
 
 @{
     ViewBag.Title = "Tickets";
@@ -12,6 +12,7 @@
 </p>
 <div class="col-md-6">
     <ul class="content">
+        <li>
         <ul class="pagination custompages">
             @for (int i = 0; i < (int)ViewData["TicketsPageNum"]; i++)
             {
@@ -25,6 +26,7 @@
                 }
             }
         </ul>
+            </li>
         @foreach (var item in Model)
         {
             <li class="ticket">
