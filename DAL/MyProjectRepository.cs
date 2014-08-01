@@ -10,20 +10,20 @@ namespace DAL.Repositories
 {
     public abstract class MyProjectRepository<T> : IRepository<T> where T : class
     {
-        internal IDbContext Context;
-        internal IDbSet<T> DbSet;
+        private readonly IDbContext context;
+        private readonly IDbSet<T> dbSet;
 
-        protected MyProjectRepository(IDbContext context, Func<IDbContext, IDbSet<T>> dbSetSelector)
+        protected MyProjectRepository(IDbContext ctx, Func<IDbContext, IDbSet<T>> dbSetSelector)
         {
-            Context = context;
-            DbSet = dbSetSelector(context);
+            context = ctx;
+            dbSet = dbSetSelector(context);
         }
 
         public void Insert(T entity)
         {
             if (entity != null)
             {
-                DbSet.Add(entity);
+                dbSet.Add(entity);
             }
             else
             {
@@ -33,11 +33,11 @@ namespace DAL.Repositories
 
         public void Delete(int id)
         {
-            var entity = DbSet.Find(id);
+            var entity = dbSet.Find(id);
             if (entity != null)
             {
-                DbSet.Attach(entity);
-                DbSet.Remove(entity);
+                dbSet.Attach(entity);
+                dbSet.Remove(entity);
             }
             else
             {
@@ -49,14 +49,14 @@ namespace DAL.Repositories
         {
             if (entity != null)
             {
-                DbSet.Attach(entity);
-                Context.Flag(entity);
+                dbSet.Attach(entity);
+                context.Flag(entity);
             }
         }
 
         public T Get(int id)
         {
-            var entity = DbSet.Find(id);
+            var entity = dbSet.Find(id);
             if (entity != null)
             {
                 return entity;
@@ -69,7 +69,7 @@ namespace DAL.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            var entities = DbSet;
+            var entities = dbSet;
             if (entities != null)
             {
                 return entities;
@@ -78,11 +78,6 @@ namespace DAL.Repositories
             {
                 throw new Exception();
             }
-        }
-
-        public void Save()
-        {
-            Context.SaveAll();
         }
     }
 }

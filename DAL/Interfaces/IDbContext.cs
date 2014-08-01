@@ -10,7 +10,7 @@ namespace DAL.Interfaces
         IDbSet<Languages> Languages { get; set; }
         IDbSet<Replies> Replies { get; set; }
 
-        void SaveAll();
         void Flag(object entity);
+        void SaveAll();
     }
 }

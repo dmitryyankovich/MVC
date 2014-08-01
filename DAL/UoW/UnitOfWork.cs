@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using DAL.Interfaces;
 using DAL.Models;
+using DAL.Repositories;
 
 
 namespace DAL.UoW
@@ -10,13 +11,13 @@ namespace DAL.UoW
     public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbContext _context;
-        private readonly IRepository<User> _userRepository;
-        private readonly IRepository<Ticket> _ticketRepository;
-        private readonly IRepository<Languages> _languagesRepository;
-        private readonly IRepository<Replies> _repliesRepository;
+        private readonly UserRepository _userRepository;
+        private readonly TicketRepository _ticketRepository;
+        private readonly LanguagesRepository _languagesRepository;
+        private readonly RepliesRepository _repliesRepository;
 
-        public UnitOfWork(IRepository<User> userRepInstance, IRepository<Ticket> ticketRepInstance,
-            IRepository<Languages> languageRepInstance, IRepository<Replies> repliesRepInstance, IDbContext contextInstance)
+        public UnitOfWork(UserRepository userRepInstance, TicketRepository ticketRepInstance,
+            LanguagesRepository languageRepInstance, RepliesRepository repliesRepInstance, IDbContext contextInstance)
         {
             _context = contextInstance;
             _userRepository = userRepInstance;

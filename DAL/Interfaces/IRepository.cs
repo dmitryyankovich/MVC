@@ -11,6 +11,5 @@ namespace DAL.Interfaces
         void Update(T entity);
         T Get(int id);
         IEnumerable<T> GetAll();
-        void Save();
     }
 }
