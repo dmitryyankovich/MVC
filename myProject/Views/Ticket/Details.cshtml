@@ -1,18 +1,16 @@
 ﻿@using Microsoft.AspNet.Identity
-@model DAL.Models.Ticket
+@model BO.Models.Ticket
 
 @{
     ViewBag.Title = "Details";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
-
 <div>
     <h4>@Model.Title</h4>
     <hr />
     <dl class="dl-horizontal">
-        <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=Model.UserId})">
+        <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
             <h6>@Model.User.UserName</h6>
             <img class="user_thumbnail" src="@Model.User.Avatar" />
         </a>
@@ -28,11 +26,11 @@
         </dd>
     </dl>
     <div id="replyHere">
-        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()) )
+        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()))
         {
             @Ajax.ActionLink("Add reply", "Create", "Replies", new { ticketId = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
         }
-        else if(Model.Reply != null)
+        else if (Model.Reply != null)
         {
             @Html.Action("ShowReply", "Replies", new { id = Model.Id })
         }

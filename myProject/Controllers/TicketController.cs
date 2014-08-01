@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using DAL.Interfaces;
-using DAL.Models;
+using BO.Interfaces;
+using BO.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using myProject.Models;
@@ -14,7 +14,7 @@ namespace myProject.Controllers
     [Authorize]
     public class TicketController : Controller
     {
-
+        private const int ticketsPerPage = 5;
         private readonly IUnitOfWork _unitOfWork;
 
         public TicketController(IUnitOfWork uowInstance)
@@ -42,9 +42,9 @@ namespace myProject.Controllers
                 tickets = tickets.OrderBy(s => s.TypeOfTicket);
             }
             int ticketCount = tickets.Count();
-            tickets = tickets.Skip(5 * pageNum).Take(5);
+            tickets = tickets.Skip(ticketsPerPage * pageNum).Take(5);
             int ticketsPageNum = 0;
-            ticketsPageNum = ticketCount % 5 != 0 ? (ticketCount / 5 + 1) : ticketCount / 5;
+            ticketsPageNum = ticketCount % ticketsPerPage != 0 ? (ticketCount / 5 + 1) : ticketCount / 5;
             ViewData["TicketsPageNum"] = ticketsPageNum;
             ViewData["ToSort"] = sort;
             ViewData["CurrentPage"] = pageNum;

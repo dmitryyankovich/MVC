@@ -1,14 +1,14 @@
 ﻿@using Microsoft.AspNet.Identity
-@model DAL.Models.Replies
+@model BO.Models.Replies
 
 @if (Model != null)
 {
     <div id="message">
         <div id="message1">
-            @if (Model.UserId == Int32.Parse(User.Identity.GetUserId()))
+            @if ((Int32.Parse(User.Identity.GetUserId()) == Model.UserId || Int32.Parse(User.Identity.GetUserId()) == Model.UserId))
             {
-                @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { ticketId = Model.TicketId }, new AjaxOptions { UpdateTargetId = "message1" })
-                @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new { ticketId = Model.TicketId }, new AjaxOptions { UpdateTargetId = "message1"})
+                @Ajax.ActionLink("Edit Reply", "Edit", "Replies", new { id = Model.TicketId }, new AjaxOptions { UpdateTargetId = "replyHere" })
+                @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new { id = Model.TicketId }, new AjaxOptions { UpdateTargetId = "replyHere" })
             }
         </div>
         <h4><a href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">@Model.User.UserName said</a></h4>

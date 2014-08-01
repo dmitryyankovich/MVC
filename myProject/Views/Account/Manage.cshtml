@@ -47,9 +47,20 @@
             <dd>
                 @Html.DisplayFor(model => model.City)
             </dd>
+
+             <dt>
+                @Html.DisplayNameFor(model => model.Languages)
+            </dt>
+
+            <dd>
+                @foreach (var t in Model.Languages)
+                {
+                    Write(t+ " ");
+                }
+            </dd>
         </dl>
         <p>
-            @Html.ActionLink("Edit", "Edit", new {id = Model.Id})
+            @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         </p>
 
         @using (Ajax.BeginForm("UserTickets", "Ticket", new AjaxOptions { UpdateTargetId = "ticketsPartial" }))

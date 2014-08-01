@@ -6,8 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using DAL.Interfaces;
-using DAL.Models;
+using BO.Interfaces;
+using BO.Models;
 using Microsoft.AspNet.Identity;
 using myProject.Models;
 
@@ -21,13 +21,6 @@ namespace myProject.Controllers
         public RepliesController(IUnitOfWork uowInstance)
         {
             _unitOfWork = uowInstance;
-        }
-
-        // GET: Replies
-        public ActionResult Index()
-        {
-            var replies = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Replies.ToList();
-            return PartialView(replies);
         }
 
         // GET: /Replies/Create

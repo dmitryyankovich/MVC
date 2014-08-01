@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using DAL.Models;
+using BO.Models;
 
 namespace myProject.Models.ViewModels
 {
@@ -31,7 +31,7 @@ namespace myProject.Models.ViewModels
         public string City { get; set; }
 
         [Display(Name = "Language")]
-        public IEnumerable<string> Languages { get; set; }
+        public string[] Languages { get; set; }
 
         [Required]
         [Display(Name = "Email")]

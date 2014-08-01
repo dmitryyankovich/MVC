@@ -1,7 +1,7 @@
-using DAL.Interfaces;
-using DAL.Models;
-using DAL.UoW;
+using BO.Interfaces;
+using BO.Models;
 using DAL.Repositories;
+using BO.UoW;
 
 [assembly: WebActivatorEx.PreApplicationStartMethod(typeof(myProject.NinjectWebCommon), "Start")]
 [assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(myProject.NinjectWebCommon), "Stop")]

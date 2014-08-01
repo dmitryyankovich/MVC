@@ -310,3 +310,5 @@ F:\myProject\myProject\bin\Microsoft.Owin.Security.OAuth.xml
 F:\myProject\myProject\bin\Microsoft.Owin.Security.Google.xml
 F:\myProject\myProject\bin\Microsoft.Owin.Security.Twitter.xml
 F:\myProject\myProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Project1.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\myProject\bin\Project1.pdb

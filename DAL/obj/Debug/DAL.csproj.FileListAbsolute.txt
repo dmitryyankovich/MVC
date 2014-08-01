@@ -25,21 +25,6 @@ D:\Курсы\MVC\guestNetwork\DAL\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Курсы\MVC\guestNetwork\DAL\bin\Debug\System.Web.WebPages.Razor.xml
 D:\Курсы\MVC\guestNetwork\DAL\obj\Debug\DAL.dll
 D:\Курсы\MVC\guestNetwork\DAL\obj\Debug\DAL.pdb
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\obj\Debug\DAL.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\obj\Debug\DAL.pdb
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\DAL.dll.config
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\DAL.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\DAL.pdb
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.xml
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
-C:\Users\user1\Documents\Visual Studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 F:\myProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 F:\myProject\DAL\obj\Debug\DAL.dll
 F:\myProject\DAL\obj\Debug\DAL.pdb
@@ -55,3 +40,20 @@ F:\myProject\DAL\bin\Debug\EntityFramework.xml
 F:\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
 F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 F:\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\DAL.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\DAL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\DAL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Project1.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Project1.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\obj\Debug\DAL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\obj\Debug\DAL.pdb

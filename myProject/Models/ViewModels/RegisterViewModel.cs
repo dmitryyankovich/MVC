@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using DAL.Models;
+using BO.Models;
 
 namespace myProject.Models.ViewModels
 {

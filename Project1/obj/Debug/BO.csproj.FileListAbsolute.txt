@@ -1,0 +1,14 @@
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\obj\Debug\BO.csprojResolveAssemblyReference.cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Project1.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Project1.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Project1.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\obj\Debug\Project1.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\Project1\obj\Debug\Project1.pdb

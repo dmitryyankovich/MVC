@@ -5,8 +5,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using DAL.Interfaces;
-using DAL.Models;
+using BO.Interfaces;
+using BO.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -99,9 +99,9 @@ namespace myProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var lan = _unitOfWork.LanguagesRepository.GetAll().Where(x => model.Languages.Contains(x.Id.ToString())).ToList();
+                var languages = _unitOfWork.LanguagesRepository.GetAll().Where(m => model.Languages.Contains(m.Id.ToString())).ToList();
 
-                var user = new User() { Languages =  lan,UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
+                var user = new User() { Languages =  languages,UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
                 if (model.Avatar == null)
                 {
                     user.Avatar = "/Content/img/default_avatar.gif";
@@ -163,9 +163,9 @@ namespace myProject.Controllers
                 Country = currentUser.Country,
                 City = currentUser.City,
                 Email = currentUser.Email,
-                Avatar = currentUser.Avatar
+                Avatar = currentUser.Avatar,
+                Languages = currentUser.Languages.Select(m => m.Language).ToArray()
             };
-
             return View(model);
         }
 
@@ -178,19 +178,33 @@ namespace myProject.Controllers
         public ActionResult Edit(int id)
         {
             User user = _unitOfWork.UserRepository.Get(id);
-            if (user == null)
+            EditViewModel editModel = new EditViewModel()
             {
-                return HttpNotFound();
-            }
-            return View(user);
+                Id = user.Id,
+                Firstname = user.Firstname,
+                Surname = user.Surname,
+                Country = user.Country,
+                City = user.City,
+            };
+            var selectedLanguage = user.Languages.Select(m => m.Id.ToString());
+            ViewBag.LanguagesList = GetLanguages(new List<string>(selectedLanguage));
+            return View(editModel);
         }
 
         // POST: Ticket/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id,Username,Firstname,Surname,Country,City,Email")] User user)
+        public ActionResult Edit(EditViewModel editModel)
         {
+            var user = _unitOfWork.UserRepository.Get(editModel.Id);
+            user.Languages.Clear();
+            var languages = _unitOfWork.LanguagesRepository.GetAll().Where(m => editModel.Languages.Contains(m.Id.ToString())).ToList();
             if (ModelState.IsValid)
             {
+                user.Firstname = editModel.Firstname;
+                user.Surname = editModel.Surname;
+                user.Country = editModel.Country;
+                user.City = editModel.City;
+                user.Languages = languages;
                 _unitOfWork.UserRepository.Update(user);
                 _unitOfWork.Commit();
                 return RedirectToAction("Manage");
