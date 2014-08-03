@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DAL.Models.Ticket>
+﻿@model IEnumerable<WebUI.ViewModels.ShowTicketsViewModel>
 
 @{
     ViewBag.Title = "Tickets";
@@ -7,55 +7,80 @@
 
 <h2 class="ticket_header">Tickets</h2>
 
+@using (@Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="search">
+        <div class="editor-label">
+            <h5>Country</h5>
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("country")
+        </div>
+    </div>
+    <div class="search">
+        <div class="editor-label">
+            <h5>City</h5>
+        </div>
+        <div class="editor-field">
+            @Html.TextBox("city")
+        </div>
+    </div>
+    <div class="search" style="margin-top:9px">
+        <input type="submit" value="Найти" />
+    </div>
+}
 <p class="create_ticket">
     @Html.ActionLink("Create New", "Create")
 </p>
 <div class="col-md-6">
     <ul class="content">
         <li>
-        <ul class="pagination custompages">
-            @for (int i = 0; i < (int)ViewData["TicketsPageNum"]; i++)
+            <ul class="pagination custompages">
+                @for (int i = 0; i < Model.First().NumberOfPages; i++)
+                {
+                    if (i == Model.First().CurrentPage)
+                    {
+                        <li class="active"><a href="@Url.Action("Tickets", new { pageNum = i, sort = Model.First().ToSort})">@(i + 1)</a></li>
+                    }
+                    else
+                    {
+                        <li><a href="@Url.Action("Tickets", new { pageNum = i, sort = Model.First().ToSort})">@(i + 1)</a></li>
+                    }
+                }
+            </ul>
+        </li>
+        <div id="ticketsThere">
+            @foreach (var item in Model)
             {
-                if (i == (int)ViewData["CurrentPage"])
-                {
-                    <li class="active"><a href="@Url.Action("Tickets", new {pageNum = i, sort = ViewData["ToSort"]})">@(i + 1)</a></li>
-                }
-                else
-                {
-                    <li><a href="@Url.Action("Tickets", new {pageNum = i, sort = ViewData["ToSort"]})">@(i + 1)</a></li>
-                }
+                <li class="ticket">
+                    <div class="image">
+                        <a href="@Url.Action("Details", new {id = item.Id})">
+                            <img class="ticket_photo" alt="no photo" src="@item.Logo" />
+                        </a>
+                    </div>
+                    <div class="details">
+                        <p class="ticketsType">
+                            <a class="ticket_details" href="@Url.Action("Details", new {id = item.Id})">@item.Title</a>
+                            @Html.DisplayNameFor(model => model.TypeOfTicket)
+                            :
+                            @Html.DisplayFor(modelItem => item.TypeOfTicket)
+                        </p>
+                        <p class="ticketsLocation">
+                            @Html.DisplayFor(modelItem => item.UserCountry), @Html.DisplayFor(modelItem => item.UserCity)
+                        </p>
+                        <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=item.UserId})">
+                            <img class="user_thumbnail" src="@item.UserAvatar" />
+                            <h6>@item.UserName</h6>
+                        </a>
+                    </div>
+                </li>
             }
-        </ul>
-            </li>
-        @foreach (var item in Model)
-        {
-            <li class="ticket">
-                <div class="image">
-                    <a href="@Url.Action("Details", new {id = item.Id})">
-                        <img class="ticket_photo" alt="no photo" src="@item.Logo" />
-                    </a>
-                </div>
-                <div class="details">
-                    <p class="ticketsType"><a class="ticket_details" href="@Url.Action("Details", new {id = item.Id})">@item.Title</a>
-                        @Html.DisplayNameFor(model => model.TypeOfTicket)
-                        :
-                        @Html.DisplayFor(modelItem => item.TypeOfTicket)
-                    </p>
-                    <p class="ticketsLocation">
-                        @Html.DisplayFor(modelItem => item.User.Country), @Html.DisplayFor(modelItem => item.User.City)
-                    </p>
-                    <a id="user_profile" href="@Url.Action("ViewProfile","Account",new {id=item.UserId})">
-                        <img class="user_thumbnail" src="@item.User.Avatar" />
-                        <h6>@item.User.UserName</h6>
-                    </a>
-                </div>
-            </li>
-        }
+        </div>
     </ul>
 </div>
-
 <div class="col-md-6">
     <ul class="filter-options">
-        <li><a href="@Url.Action("Tickets", new { sort = 1, pageNum = ViewData["CurrentPage"]})">Sort by type</a></li>
+        <li><a href="@Url.Action("Tickets", new { sort = 1, pageNum = Model.First().CurrentPage})">Sort by type</a></li>
     </ul>
 </div>

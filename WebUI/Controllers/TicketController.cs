@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using DAL.Interfaces;
 using DAL.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using myProject.Models;
+using WebUI.ViewModels;
 
-namespace myProject.Controllers
+namespace WebUI.Controllers
 {
     [Authorize]
     public class TicketController : Controller
@@ -21,6 +22,7 @@ namespace myProject.Controllers
         {
             _unitOfWork = uowInstance;
         }
+
         // GET: Ticket
         public ActionResult UserTickets(int withReply = 0)
         {
@@ -29,33 +31,62 @@ namespace myProject.Controllers
             {
                 tickets = tickets.FindAll(m => m.Reply != null);
             }
-
-            return PartialView(tickets.ToList());
+            var ticketsView = new List<TicketViewModel>();
+            foreach (Ticket ticket in tickets)
+            {
+                ticketsView.Add(Mapper.DynamicMap<TicketViewModel>(ticket));
+            }
+            return PartialView(ticketsView);
         }
 
         [AllowAnonymous]
         public ActionResult Tickets(int sort = 0, int pageNum = 0)
         {
-            IEnumerable<Ticket> tickets;
-            if (sort == 0)
+            var tickets = _unitOfWork.TicketRepository.GetAll();
+            if (sort != 0)
             {
-                tickets = _unitOfWork.TicketRepository.GetAll();
-            }
-            else
-            {
-                tickets = _unitOfWork.TicketRepository.GetAll();
                 tickets = tickets.OrderBy(s => s.TypeOfTicket);
             }
             int ticketCount = tickets.Count();
-            tickets = tickets.Skip(ticketsPerPage * pageNum).Take(5);
+            tickets = tickets.Skip(ticketsPerPage * pageNum).Take(ticketsPerPage);
             int ticketsPageNum = 0;
-            ticketsPageNum = ticketCount % ticketsPerPage != 0 ? (ticketCount / 5 + 1) : ticketCount / 5;
-            ViewData["TicketsPageNum"] = ticketsPageNum;
-            ViewData["ToSort"] = sort;
-            ViewData["CurrentPage"] = pageNum;
-            return View(tickets.ToList());
+            ticketsPageNum = ticketCount % ticketsPerPage != 0 ? (ticketCount / ticketsPerPage + 1) : ticketCount / ticketsPerPage;
+            var ticketsView = new List<ShowTicketsViewModel>();
+            foreach (Ticket ticket in tickets)
+            {
+                ticketsView.Add(Mapper.DynamicMap<ShowTicketsViewModel>(ticket));
+            }
+            ticketsView[0].NumberOfPages = ticketsPageNum;
+            ticketsView[0].ToSort = sort;
+            ticketsView[0].CurrentPage = pageNum;
+            return View(ticketsView);
         }
 
+
+        [HttpPost]
+        public ActionResult Tickets(string country, string city,int sort = 0, int pageNum = 0)
+        {
+            var tickets = _unitOfWork.TicketRepository.GetAll()
+                .Where(m => m.User.City.Contains(city))
+                .Where(m => m.User.Country.Contains(country));
+            if (sort != 0)
+            {
+                tickets = tickets.OrderBy(s => s.TypeOfTicket);
+            }
+            int ticketCount = tickets.Count();
+            tickets = tickets.Skip(ticketsPerPage * pageNum).Take(ticketsPerPage);
+            int ticketsPageNum = 0;
+            ticketsPageNum = ticketCount % ticketsPerPage != 0 ? (ticketCount / ticketsPerPage + 1) : ticketCount / ticketsPerPage;
+            var ticketsView = new List<ShowTicketsViewModel>();
+            foreach (Ticket ticket in tickets)
+            {
+                ticketsView.Add(Mapper.DynamicMap<ShowTicketsViewModel>(ticket));
+            }
+            ticketsView[0].NumberOfPages = ticketsPageNum;
+            ticketsView[0].ToSort = sort;
+            ticketsView[0].CurrentPage = pageNum;
+            return View(ticketsView); 
+        }
 
         // GET: Ticket/Details/5
         public ActionResult Details(int id)
@@ -65,7 +96,8 @@ namespace myProject.Controllers
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            var ticketView = Mapper.DynamicMap<TicketViewModel>(ticket);
+            return View(ticketView);
         }
 
         // GET: Ticket/Create
@@ -76,11 +108,12 @@ namespace myProject.Controllers
 
         // POST: Ticket/Create
         [HttpPost]
-        public ActionResult Create([Bind(Include = "Id,UserId,Title,Content,TypeOfTicket,Logo")] Ticket ticket)
+        public ActionResult Create(TicketViewModel ticketViewModel)
         {
             if (ModelState.IsValid)
             {
-                ticket.UserId = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Id;
+                ticketViewModel.UserId = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Id;
+                var ticket = Mapper.DynamicMap<Ticket>(ticketViewModel);
                 _unitOfWork.TicketRepository.Insert(ticket);
                 _unitOfWork.Commit();
                 return RedirectToAction("Tickets");
@@ -92,19 +125,21 @@ namespace myProject.Controllers
         public ActionResult Edit(int id)
         {
             Ticket ticket = _unitOfWork.TicketRepository.Get(id);
+            var ticketView = Mapper.DynamicMap<TicketViewModel>(ticket);
             if (ticket == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(ticketView);
         }
 
         // POST: Ticket/Edit/5
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id,UserId,Title,Content,TypeOfTicket,Logo")] Ticket ticket)
+        public ActionResult Edit(TicketViewModel ticketViewModel)
         {
             if (ModelState.IsValid)
             {
+                var ticket = Mapper.DynamicMap<Ticket>(ticketViewModel);
                 _unitOfWork.TicketRepository.Update(ticket);
                 _unitOfWork.Commit();
                 return RedirectToAction("Tickets");
@@ -117,11 +152,12 @@ namespace myProject.Controllers
         public ActionResult Delete(int id)
         {
             Ticket ticket = _unitOfWork.TicketRepository.Get(id);
+            var ticketView = Mapper.DynamicMap<TicketViewModel>(ticket);
             if (ticket == null)
             {
                 return HttpNotFound();
             }
-            return View(ticket);
+            return View(ticketView);
         }
 
         // POST: Ticket/Delete/5

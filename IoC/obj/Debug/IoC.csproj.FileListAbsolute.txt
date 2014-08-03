@@ -76,3 +76,55 @@ C:\Users\Student 1\Documents\MVC\IoC\bin\Debug\Ninject.Web.Mvc.xml
 C:\Users\Student 1\Documents\MVC\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
 C:\Users\Student 1\Documents\MVC\IoC\obj\Debug\IoC.dll
 C:\Users\Student 1\Documents\MVC\IoC\obj\Debug\IoC.pdb
+d:\Programming\Git\MVC\IoC\bin\Debug\IoC.dll.config
+d:\Programming\Git\MVC\IoC\bin\Debug\IoC.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\IoC.pdb
+d:\Programming\Git\MVC\IoC\bin\Debug\BLL.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\DAL.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\EntityFramework.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\EntityFramework.SqlServer.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.Web.Common.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.Web.Mvc.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\WebActivatorEx.dll
+d:\Programming\Git\MVC\IoC\bin\Debug\BLL.pdb
+d:\Programming\Git\MVC\IoC\bin\Debug\DAL.pdb
+d:\Programming\Git\MVC\IoC\bin\Debug\EntityFramework.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\EntityFramework.SqlServer.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.Web.Common.xml
+d:\Programming\Git\MVC\IoC\bin\Debug\Ninject.Web.Mvc.xml
+d:\Programming\Git\MVC\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
+d:\Programming\Git\MVC\IoC\obj\Debug\IoC.dll
+d:\Programming\Git\MVC\IoC\obj\Debug\IoC.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\IoC.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\IoC.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\IoC.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\BLL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\DAL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.Web.Common.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.Web.Mvc.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\WebActivatorEx.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\BLL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\DAL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.Web.Common.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\bin\Debug\Ninject.Web.Mvc.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\obj\Debug\IoC.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\IoC\obj\Debug\IoC.pdb

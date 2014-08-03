@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model DAL.Models.Ticket
+@model WebUI.ViewModels.TicketViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -11,8 +11,8 @@
     <hr />
     <dl class="dl-horizontal">
         <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
-            @Model.User.UserName
-            <img class="user_thumbnail" src="@Model.User.Avatar" />
+            @Model.UserName
+            <img class="user_thumbnail" src="@Model.UserAvatar" />
         </a>
         <dd>
             <img src="@Model.Logo" alt="no photo" />
@@ -26,11 +26,11 @@
         </dd>
     </dl>
     <div id="replyHere">
-        @if (Model.Reply == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()))
+        @if (Model.ReplyMessage == null && Model.UserId != Int32.Parse(User.Identity.GetUserId()))
         {
             @Ajax.ActionLink("Add reply", "Create", "Replies", new { ticketId = Model.Id }, new AjaxOptions { UpdateTargetId = "replyHere" })
         }
-        else if (Model.Reply != null)
+        else if (Model.ReplyMessage != null)
         {
             @Html.Action("ShowReply", "Replies", new { id = Model.Id })
         }
@@ -40,6 +40,8 @@
     @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
     {
         @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
+        @Html.Raw(" |")
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
         @Html.Raw(" |")
     }
     @Html.ActionLink("Back to List", "Tickets")

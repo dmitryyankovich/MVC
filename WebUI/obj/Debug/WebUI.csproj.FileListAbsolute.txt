@@ -210,3 +210,155 @@ C:\Users\Student 1\Documents\MVC\WebUI\obj\Debug\myProject.Migrations.FourthMigr
 C:\Users\Student 1\Documents\MVC\WebUI\obj\Debug\WebUI.csproj.GenerateResource.Cache
 C:\Users\Student 1\Documents\MVC\WebUI\obj\Debug\myProject.dll
 C:\Users\Student 1\Documents\MVC\WebUI\obj\Debug\myProject.pdb
+d:\Programming\Git\MVC\WebUI\bin\Antlr3.Runtime.dll
+d:\Programming\Git\MVC\WebUI\bin\DAL.dll
+d:\Programming\Git\MVC\WebUI\bin\EntityFramework.dll
+d:\Programming\Git\MVC\WebUI\bin\EntityFramework.SqlServer.dll
+d:\Programming\Git\MVC\WebUI\bin\IoC.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Google.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Web.Infrastructure.dll
+d:\Programming\Git\MVC\WebUI\bin\Newtonsoft.Json.dll
+d:\Programming\Git\MVC\WebUI\bin\Ninject.dll
+d:\Programming\Git\MVC\WebUI\bin\Ninject.Web.Common.dll
+d:\Programming\Git\MVC\WebUI\bin\Ninject.Web.Mvc.dll
+d:\Programming\Git\MVC\WebUI\bin\Owin.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Helpers.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Mvc.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Optimization.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Razor.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.Deployment.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.dll
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.Razor.dll
+d:\Programming\Git\MVC\WebUI\bin\WebActivatorEx.dll
+d:\Programming\Git\MVC\WebUI\bin\WebGrease.dll
+d:\Programming\Git\MVC\WebUI\bin\DAL.pdb
+d:\Programming\Git\MVC\WebUI\bin\IoC.pdb
+d:\Programming\Git\MVC\WebUI\bin\Ninject.xml
+d:\Programming\Git\MVC\WebUI\bin\Ninject.Web.Common.xml
+d:\Programming\Git\MVC\WebUI\bin\Ninject.Web.Mvc.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Helpers.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Mvc.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Optimization.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.Razor.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.Deployment.xml
+d:\Programming\Git\MVC\WebUI\bin\System.Web.WebPages.Razor.xml
+d:\Programming\Git\MVC\WebUI\bin\Antlr3.Runtime.pdb
+d:\Programming\Git\MVC\WebUI\bin\Newtonsoft.Json.xml
+d:\Programming\Git\MVC\WebUI\bin\EntityFramework.xml
+d:\Programming\Git\MVC\WebUI\bin\EntityFramework.SqlServer.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Google.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.InitialMigration.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.SecondMigration.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.ThirdCommit.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.FourthMigration.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.csproj.GenerateResource.Cache
+D:\Programming\Git\MVC\WebUI\bin\AutoMapper.Net4.dll
+D:\Programming\Git\MVC\WebUI\bin\WebUI.dll.config
+D:\Programming\Git\MVC\WebUI\bin\WebUI.dll
+D:\Programming\Git\MVC\WebUI\bin\WebUI.pdb
+D:\Programming\Git\MVC\WebUI\bin\AutoMapper.dll
+D:\Programming\Git\MVC\WebUI\bin\BLL.dll
+D:\Programming\Git\MVC\WebUI\bin\BLL.pdb
+D:\Programming\Git\MVC\WebUI\bin\AutoMapper.xml
+D:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.dll
+D:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\AutoMapper.Net4.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\WebUI.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\WebUI.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\WebUI.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Antlr3.Runtime.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\AutoMapper.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\BLL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\DAL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\EntityFramework.SqlServer.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\IoC.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Newtonsoft.Json.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.Web.Common.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.Web.Mvc.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Owin.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Helpers.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Mvc.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Optimization.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Razor.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.Deployment.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.Razor.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\WebActivatorEx.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\WebGrease.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\BLL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\DAL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\IoC.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\AutoMapper.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.Web.Common.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Ninject.Web.Mvc.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Helpers.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Mvc.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Optimization.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.Razor.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.Deployment.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\System.Web.WebPages.Razor.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Antlr3.Runtime.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Newtonsoft.Json.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\EntityFramework.SqlServer.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.csproj.GenerateResource.Cache
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.Migrations.InitialMigration.resources
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.Migrations.SecondMigration.resources
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.Migrations.ThirdCommit.resources
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\WebUI\obj\Debug\WebUI.Migrations.FourthMigration.resources

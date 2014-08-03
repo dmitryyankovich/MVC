@@ -49,8 +49,6 @@ C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Ent
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Project1.dll
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Project1.pdb
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.xml
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
@@ -104,3 +102,18 @@ C:\Users\Student 1\Documents\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityF
 C:\Users\Student 1\Documents\MVC\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Users\Student 1\Documents\MVC\DAL\obj\Debug\DAL.dll
 C:\Users\Student 1\Documents\MVC\DAL\obj\Debug\DAL.pdb
+d:\Programming\Git\MVC\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+d:\Programming\Git\MVC\DAL\obj\Debug\DAL.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\DAL.dll.config
+D:\Programming\Git\MVC\DAL\bin\Debug\DAL.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\DAL.pdb
+D:\Programming\Git\MVC\DAL\bin\Debug\EntityFramework.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Programming\Git\MVC\DAL\bin\Debug\EntityFramework.xml
+D:\Programming\Git\MVC\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Programming\Git\MVC\DAL\obj\Debug\DAL.pdb

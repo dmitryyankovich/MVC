@@ -82,6 +82,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DomainModels\Feedback.cs" />
     <Compile Include="DomainModels\IdentityModels.cs" />
     <Compile Include="DomainModels\IdModel.cs" />
     <Compile Include="DomainModels\Languages.cs" />

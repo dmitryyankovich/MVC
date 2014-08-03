@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebUI.ViewModels.FeedbackViewModel>
+<div id ="feedbackPartial">
+    <table class="table_class">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rating)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Rating)
+                </td>
+                <td>
+                    @Ajax.ActionLink("View details","Details","Feedback",new {id = item.Id},new AjaxOptions{UpdateTargetId = "feedbackPartial"})
+                </td>
+            </tr>
+        }
+    </table>
+</div>

@@ -6,12 +6,13 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using AutoMapper;
 using DAL.Interfaces;
 using DAL.Models;
 using Microsoft.AspNet.Identity;
-using myProject.Models;
+using WebUI.ViewModels;
 
-namespace myProject.Controllers
+namespace WebUI.Controllers
 {
     [Authorize]
     public class RepliesController : Controller
@@ -31,7 +32,8 @@ namespace myProject.Controllers
                 TicketId = ticketId,
                 UserId = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId())).Id
             };
-            return PartialView(reply);
+            var replyViewModel = Mapper.DynamicMap<RepliesViewModel>(reply);
+            return PartialView(replyViewModel);
         }
 
         // POST: /Response/Create
@@ -39,20 +41,15 @@ namespace myProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TicketId,UserId,Message")] Replies replyModel)
+        public ActionResult Create(RepliesViewModel replyModel)
         {
             if (ModelState.IsValid)
             {
-                Replies reply = new Replies
-                {
-                    Message = replyModel.Message,
-                    TicketId = replyModel.TicketId,
-                    Time = DateTime.Now,
-                    UserId = replyModel.UserId
-                };
+                var reply = Mapper.DynamicMap<Replies>(replyModel);
+                reply.Time = DateTime.Now;
                 _unitOfWork.RepliesRepository.Insert(reply);
                 _unitOfWork.Commit();
-                return RedirectToAction("ShowReply", new { id = reply.TicketId });
+                return RedirectToAction("ShowReply", new { id = replyModel.TicketId });
                 //return PartialView("HaveReply");
             }
             return PartialView("Create");
@@ -60,7 +57,9 @@ namespace myProject.Controllers
 
         public ActionResult ShowReply(int id)
         {
-            Replies reply = _unitOfWork.RepliesRepository.Get(id);
+            var reply1 = _unitOfWork.RepliesRepository.Get(id);
+            var reply = Mapper.DynamicMap<RepliesViewModel>(reply1);
+            reply.UserName = reply1.User.UserName;
             return PartialView(reply);
         }
 
@@ -68,7 +67,7 @@ namespace myProject.Controllers
         // GET: Replies/Edit/5
         public ActionResult Edit(int id)
         {
-            Replies reply = _unitOfWork.RepliesRepository.Get(id);
+            var reply = Mapper.DynamicMap<RepliesViewModel>(_unitOfWork.RepliesRepository.Get(id));
             if (reply == null)
             {
                 return HttpNotFound();
@@ -81,23 +80,24 @@ namespace myProject.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "TicketId,UserId,Message")] Replies replies)
+        public ActionResult Edit(RepliesViewModel replyViewModel)
         {
             if (ModelState.IsValid)
             {
-                replies.Time = DateTime.Now;
-                _unitOfWork.RepliesRepository.Update(replies);
+                replyViewModel.Time = DateTime.Now;
+                var reply = Mapper.DynamicMap<Replies>(replyViewModel);
+                _unitOfWork.RepliesRepository.Update(reply);
                 _unitOfWork.Commit();
-                return RedirectToAction("ShowReply", new { id = replies.TicketId });
+                return RedirectToAction("ShowReply", new { id = reply.TicketId });
             }
 
-            return View(replies);
+            return View(replyViewModel);
         }
 
         // GET: Replies/Delete/5
         public ActionResult Delete(int id)
         {
-            Replies reply = _unitOfWork.RepliesRepository.Get(id);
+            var reply = Mapper.DynamicMap<RepliesViewModel>(_unitOfWork.RepliesRepository.Get(id));
             if (reply == null)
             {
                 return HttpNotFound();

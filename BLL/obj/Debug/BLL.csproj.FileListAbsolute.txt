@@ -1,6 +1,3 @@
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\DAL.dll.config
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\DAL.dll
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\DAL.pdb
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\EntityFramework.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
@@ -11,8 +8,6 @@ C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\Ent
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\DAL.dll
-C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\DAL.pdb
 D:\New folder\MVC-master\BLL\bin\Debug\DAL.dll.config
 D:\New folder\MVC-master\BLL\bin\Debug\DAL.dll
 D:\New folder\MVC-master\BLL\bin\Debug\DAL.pdb
@@ -58,3 +53,8 @@ C:\Users\Student 1\Documents\MVC\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityF
 C:\Users\Student 1\Documents\MVC\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Users\Student 1\Documents\MVC\BLL\obj\Debug\BLL.dll
 C:\Users\Student 1\Documents\MVC\BLL\obj\Debug\BLL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\BLL.dll.config
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\BLL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\bin\Debug\BLL.pdb
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\BLL.dll
+C:\Users\user1\documents\visual studio 2013\Projects\myProject\BLL\obj\Debug\BLL.pdb

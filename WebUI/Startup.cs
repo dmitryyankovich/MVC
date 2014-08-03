@@ -1,8 +1,8 @@
 ﻿using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartupAttribute(typeof(myProject.Startup))]
-namespace myProject
+[assembly: OwinStartupAttribute(typeof(WebUI.Startup))]
+namespace WebUI
 {
     public partial class Startup
     {

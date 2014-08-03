@@ -1,5 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
-@model DAL.Models.Replies
+@model WebUI.ViewModels.RepliesViewModel
 
 @if (Model != null)
 {
@@ -11,7 +11,7 @@
                 @Ajax.ActionLink("Delete Reply", "Delete", "Replies", new { id = Model.TicketId }, new AjaxOptions { UpdateTargetId = "replyHere" })
             }
         </div>
-        <h4><a href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">@Model.User.UserName said</a></h4>
+        <h4><a href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">@Model.UserName said</a></h4>
         <h6>@Model.Time</h6>
         @Html.TextAreaFor(model => model.Message, new { @readonly = "readonly" })
     </div>

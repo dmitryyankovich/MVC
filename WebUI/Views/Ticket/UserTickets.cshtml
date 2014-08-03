@@ -1,9 +1,9 @@
-﻿@model IEnumerable<DAL.Models.Ticket>
+﻿@model IEnumerable<WebUI.ViewModels.TicketViewModel>
 <div>
     <p class="create_ticket">
         @Html.ActionLink("Create New", "Create")
     </p>
-    <table id="tickets">
+    <table class="table_class">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Logo)
@@ -18,7 +18,7 @@
                 @Html.DisplayNameFor(model => model.TypeOfTicket)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Reply)
+                @Html.DisplayNameFor(model => model.ReplyMessage)
             </th>
         </tr>
         @foreach (var item in Model)
@@ -37,7 +37,7 @@
                     @Html.DisplayFor(modelItem => item.TypeOfTicket)
                 </td>
                 <td>
-                    @if (item.Reply == null)
+                    @if (item.ReplyMessage == null)
                     {
                         <p>Sorry, no replies :(</p>
                     }

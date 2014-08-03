@@ -1,0 +1,39 @@
+﻿@using Microsoft.AspNet.Identity
+@model WebUI.ViewModels.FeedbackViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
+            @Model.UserName
+        </a>
+        <dt>
+            @Html.DisplayNameFor(model => model.FeedbackMessage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FeedbackMessage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+    </dl>
+</div>
+<p>
+    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
+    {
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.Id })*@
+        @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "feedbackForm" })
+        @Html.Raw(" |")
+        @*@Html.ActionLink("Delete", "Delete", new { id = Model.Id })*@
+        @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "feedbackForm" })
+    }
+</p>

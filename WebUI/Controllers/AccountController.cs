@@ -2,19 +2,18 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using System.Security.Claims;
+using AutoMapper;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
-using DAL.Interfaces;
 using DAL.Models;
+using DAL.Interfaces;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using myProject.Models;
-using myProject.Models.ViewModels;
+using WebUI.ViewModels;
 
-namespace myProject.Controllers
+namespace WebUI.Controllers
 {
     [Authorize]
     public class AccountController : Controller
@@ -101,8 +100,8 @@ namespace myProject.Controllers
             if (ModelState.IsValid)
             {
                 var languages = _unitOfWork.LanguagesRepository.GetAll().Where(m => model.Languages.Contains(m.Id.ToString())).ToList();
-
-                var user = new User() { Languages = languages, UserName = model.UserName, Email = model.Email, Firstname = model.Firstname, Surname = model.Surname, Country = model.Country, City = model.City };
+                var user = Mapper.DynamicMap<User>(model);
+                user.Languages = languages;
                 if (model.Avatar == null)
                 {
                     user.Avatar = "/Content/img/default_avatar.gif";
@@ -146,34 +145,17 @@ namespace myProject.Controllers
         // GET: /Account/Manage
         public ActionResult Manage(ManageMessageId? message)
         {
-            ViewBag.StatusMessage =
-                message == ManageMessageId.ChangePasswordSuccess ? "Your password has been changed."
-                : message == ManageMessageId.SetPasswordSuccess ? "Your password has been set."
-                : message == ManageMessageId.RemoveLoginSuccess ? "The external login was removed."
-                : message == ManageMessageId.Error ? "An error has occurred."
-                : "";
-            ViewBag.HasLocalPassword = HasPassword();
-            ViewBag.ReturnUrl = Url.Action("Manage");
             var currentUser = _unitOfWork.UserRepository.Get(Int32.Parse(User.Identity.GetUserId()));
-            var model = new ManageUserViewModel()
-            {
-                Id = currentUser.Id,
-                Firstname = currentUser.Firstname,
-                Surname = currentUser.Surname,
-                UserName = currentUser.UserName,
-                Country = currentUser.Country,
-                City = currentUser.City,
-                Email = currentUser.Email,
-                Avatar = currentUser.Avatar,
-                Languages = currentUser.Languages.Select(m => m.Language).ToArray()
-            };
+            var model = Mapper.DynamicMap<ManageUserViewModel>(currentUser);
+            model.Languages = currentUser.Languages.Select(m => m.Language).ToArray();
             return View(model);
         }
 
         public ActionResult ViewProfile(int id)
         {
-            var User = _unitOfWork.UserRepository.Get(id);
-            return View(User);
+            var user = _unitOfWork.UserRepository.Get(id);
+            var userModel = Mapper.DynamicMap<ViewProfileViewModel>(user);
+            return View(userModel);
         }
 
         public ActionResult Edit(int id)
@@ -211,60 +193,7 @@ namespace myProject.Controllers
                 return RedirectToAction("Manage");
             }
             return View();
-
         }
-
-        //
-        // POST: /Account/Manage
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Manage(ManageUserViewModel model)
-        {
-            bool hasPassword = HasPassword();
-            ViewBag.HasLocalPassword = hasPassword;
-            ViewBag.ReturnUrl = Url.Action("Manage");
-            if (hasPassword)
-            {
-                if (ModelState.IsValid)
-                {
-                    IdentityResult result = await UserManager.ChangePasswordAsync(Int32.Parse(User.Identity.GetUserId()), model.OldPassword, model.NewPassword);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Manage", new { Message = ManageMessageId.ChangePasswordSuccess });
-                    }
-                    else
-                    {
-                        AddErrors(result);
-                    }
-                }
-            }
-            else
-            {
-                // User does not have a password so remove any validation errors caused by a missing OldPassword field
-                ModelState state = ModelState["OldPassword"];
-                if (state != null)
-                {
-                    state.Errors.Clear();
-                }
-
-                if (ModelState.IsValid)
-                {
-                    IdentityResult result = await UserManager.AddPasswordAsync(Int32.Parse(User.Identity.GetUserId()), model.NewPassword);
-                    if (result.Succeeded)
-                    {
-                        return RedirectToAction("Manage", new { Message = ManageMessageId.SetPasswordSuccess });
-                    }
-                    else
-                    {
-                        AddErrors(result);
-                    }
-                }
-            }
-
-            // If we got this far, something failed, redisplay form
-            return View(model);
-        }
-
         //
         // POST: /Account/ExternalLogin
         [HttpPost]

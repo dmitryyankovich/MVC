@@ -1,4 +1,4 @@
-namespace myProject.Migrations
+namespace WebUI.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;

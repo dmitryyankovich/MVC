@@ -1,4 +1,4 @@
-﻿@model DAL.Models.User
+﻿@model WebUI.ViewModels.ViewProfileViewModel
 
 @{
     ViewBag.Title = "ViewProfile";
@@ -7,7 +7,7 @@
 
 <h2>ViewProfile</h2>
 
-<div>
+<div class="col-md-6">
     <h4>@Model.UserName</h4>
     <hr />
     <dl class="dl-horizontal avatar">
@@ -54,4 +54,15 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
     </dl>
+</div>
+<div class="col-md-6" id="feedback">
+    @Ajax.ActionLink("Add feedback", "Create", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedback" })
+    <div id="feedbacks">
+        <div id="feedbackForm">
+            @using (Ajax.BeginForm("ShowFeedbacks", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedbackForm" }))
+            {
+                <input type="submit" value="Show feedbacks" class="btn btn-default" />
+            }
+        </div>
+    </div>
 </div>

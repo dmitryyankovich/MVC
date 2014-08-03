@@ -1,4 +1,4 @@
-﻿@model DAL.Models.Ticket
+﻿@model WebUI.ViewModels.TicketViewModel
 
 @{
     ViewBag.Title = "Edit";
@@ -15,7 +15,6 @@
         <h4>Ticket</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.Id)
         @Html.HiddenFor(model => model.UserId)
 
         <div class="form-group">
