@@ -155,6 +155,7 @@ namespace WebUI.Controllers
         {
             var user = _unitOfWork.UserRepository.Get(id);
             var userModel = Mapper.DynamicMap<ViewProfileViewModel>(user);
+            userModel.Languages = user.Languages.Select(m => m.Language).ToArray();
             return View(userModel);
         }
 

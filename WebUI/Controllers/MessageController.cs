@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.UI.WebControls.WebParts;
 using AutoMapper;
 using DAL.Interfaces;
 using DAL.Models;
@@ -19,6 +20,17 @@ namespace WebUI.Controllers
         public MessageController(IUnitOfWork uowInstance)
         {
             _unitOfWork = uowInstance;
+        }
+
+        public ActionResult MessagesCount()
+        {
+            var messages = _unitOfWork.MessageRepository.GetAll().Count(m => m.UserNameTo == (User.Identity.GetUserName()));
+            return PartialView(messages);
+        }
+
+        public ActionResult Success()
+        {
+            return PartialView();
         }
 
         public ActionResult ShowMessages(int userId, int output = 0)
@@ -78,7 +90,7 @@ namespace WebUI.Controllers
                 message.Time = DateTime.Now;
                 _unitOfWork.MessageRepository.Insert(message);
                 _unitOfWork.Commit();
-                return View();
+                return PartialView("Success");
             }
             return PartialView("Create");
         }
@@ -107,7 +119,7 @@ namespace WebUI.Controllers
                 var message = Mapper.DynamicMap<Message>(messageViewModel);
                 _unitOfWork.MessageRepository.Update(message);
                 _unitOfWork.Commit();
-                return RedirectToAction("Manage", "Account", new { userId = Int32.Parse(User.Identity.GetUserId()) });
+                return RedirectToAction("Success");
             }
 
             return View(messageViewModel);

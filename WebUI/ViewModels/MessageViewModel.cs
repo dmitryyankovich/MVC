@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,7 @@ namespace WebUI.ViewModels
         public string UserNameTo { get; set; }
         public DateTime Time { get; set; }
         [StringLength(256, ErrorMessage = "The {0} must be maximum {1} characters long.")]
+        [DisplayName("Message")]
         public string MessageText { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }

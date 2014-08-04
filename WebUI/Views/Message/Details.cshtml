@@ -2,11 +2,10 @@
 @model WebUI.ViewModels.MessageViewModel
 
 @{
-    ViewBag.Title = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = null;
 }
 
-<div>
+<div id="messageForm">
     <dl class="dl-horizontal">
         <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
             @Model.UserName
@@ -26,7 +25,6 @@
             @Html.DisplayFor(model => model.MessageText)
         </dd>
     </dl>
-</div>
 <p>
     @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
     {
@@ -35,3 +33,4 @@
         @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
     }
 </p>
+</div>

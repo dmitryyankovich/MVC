@@ -1,4 +1,5 @@
-﻿@model IEnumerable<WebUI.ViewModels.MessageViewModel>
+﻿@using Microsoft.AspNet.Identity
+@model IEnumerable<WebUI.ViewModels.MessageViewModel>
 <div id="messagePartial">
     <table class="table_class">
         <tr>
@@ -18,9 +19,19 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Time)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.UserName)
-                </td>
+                @if (item.UserId != Int32.Parse(User.Identity.GetUserId()))
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserName)
+                    </td>
+                }
+                else
+                {
+                    <td>
+                        @Html.DisplayFor(modelItem => item.UserNameTo)
+                    </td>
+                }
+                
                 <td>
                     @Html.DisplayFor(modelItem => item.Title)
                 </td>

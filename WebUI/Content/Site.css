@@ -275,7 +275,7 @@ textarea{
     margin-right: 10px;
 }
 
-#Rating {
+#Rating, #Title {
     margin-left: 85px;
 }
 
@@ -289,4 +289,10 @@ textarea{
 
 .find {
     margin: 20px 0 0 65px;
+}
+
+#messagesAmount {
+    color: #999;
+    margin: 0;
+    margin-left: 14px;
 }

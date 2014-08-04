@@ -8,11 +8,13 @@
         <ul class="nav navbar-nav navbar-right">
             <li>
                 @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Manage", "Account", routeValues: null, htmlAttributes: new { title = "Manage" })
+                <div id ="countMessages">@{ Html.RenderAction("MessagesCount", "Message"); }</div>
             </li>
             <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
         </ul>
     }
 }
+
 else
 {
     <ul class="nav navbar-nav navbar-right">
