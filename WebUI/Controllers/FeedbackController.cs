@@ -101,9 +101,10 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                feedbackViewModel.Time = DateTime.Now;
-                var feedback = Mapper.DynamicMap<Feedback>(feedbackViewModel);
-                _unitOfWork.FeedbackRepository.Update(feedback);
+                var feedback = _unitOfWork.FeedbackRepository.Get(feedbackViewModel.Id);
+                feedback.Rating = feedbackViewModel.Rating;
+                feedback.FeedbackMessage = feedbackViewModel.FeedbackMessage;
+                feedback.Time = DateTime.Now;
                 _unitOfWork.Commit();
                 return RedirectToAction("ShowFeedbacks", new { userId = feedback.UserToId });
             }

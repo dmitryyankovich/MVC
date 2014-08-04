@@ -23,6 +23,8 @@ namespace WebUI
                 viewmodel.ReplyMessage = ticket.Reply.Message;
                 viewmodel.UserName = ticket.User.UserName;
             });
+
+            Mapper.CreateMap<User, EditViewModel>();
             Mapper.CreateMap<Ticket, ShowTicketsViewModel>().AfterMap((ticket, viewmodel) =>
             {
                 viewmodel.UserAvatar = ticket.User.Avatar;

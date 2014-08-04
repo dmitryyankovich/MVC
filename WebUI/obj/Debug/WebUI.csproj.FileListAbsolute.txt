@@ -271,10 +271,6 @@ d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Google.xml
 d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.Twitter.xml
 d:\Programming\Git\MVC\WebUI\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.csprojResolveAssemblyReference.cache
-d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.InitialMigration.resources
-d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.SecondMigration.resources
-d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.ThirdCommit.resources
-d:\Programming\Git\MVC\WebUI\obj\Debug\myProject.Migrations.FourthMigration.resources
 d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.csproj.GenerateResource.Cache
 D:\Programming\Git\MVC\WebUI\bin\AutoMapper.Net4.dll
 D:\Programming\Git\MVC\WebUI\bin\WebUI.dll.config
@@ -512,3 +508,7 @@ F:\myProject\WebUI\obj\Debug\WebUI.Migrations.FourthMigration.resources
 F:\myProject\WebUI\obj\Debug\WebUI.csproj.GenerateResource.Cache
 F:\myProject\WebUI\obj\Debug\WebUI.dll
 F:\myProject\WebUI\obj\Debug\WebUI.pdb
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.Migrations.InitialMigration.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.Migrations.SecondMigration.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.Migrations.ThirdCommit.resources
+d:\Programming\Git\MVC\WebUI\obj\Debug\WebUI.Migrations.FourthMigration.resources

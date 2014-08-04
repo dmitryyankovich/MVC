@@ -6,7 +6,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
+<div id ="feedbackForm">
     <dl class="dl-horizontal">
         <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
             @Model.UserName

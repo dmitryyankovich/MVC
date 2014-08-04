@@ -15,7 +15,7 @@
         </tr>
         @foreach (var item in Model)
         {
-            if (item.IsRead == false)
+            if (item.IsRead == false && item.UserId != Int32.Parse(User.Identity.GetUserId()))
             {
                 <tr class="colored">
                     <td>

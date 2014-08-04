@@ -58,7 +58,10 @@ namespace WebUI.Controllers
         public ActionResult Details(int id)
         {
             Message message = _unitOfWork.MessageRepository.Get(id);
-            message.IsRead = true;
+            if (message.UserId != Int32.Parse(User.Identity.GetUserId()))
+            {
+                message.IsRead = true;
+            }
             _unitOfWork.Commit();
             if (message == null)
             {
@@ -119,9 +122,10 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                messageViewModel.Time = DateTime.Now;
-                var message = Mapper.DynamicMap<Message>(messageViewModel);
-                _unitOfWork.MessageRepository.Update(message);
+                var message = _unitOfWork.MessageRepository.Get(messageViewModel.Id);
+                message.MessageText = messageViewModel.MessageText;
+                message.Title = messageViewModel.Title;
+                message.Time = DateTime.Now;
                 _unitOfWork.Commit();
                 return RedirectToAction("Success");
             }

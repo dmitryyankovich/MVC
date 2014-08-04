@@ -162,14 +162,7 @@ namespace WebUI.Controllers
         public ActionResult Edit(int id)
         {
             User user = _unitOfWork.UserRepository.Get(id);
-            EditViewModel editModel = new EditViewModel()
-            {
-                Id = user.Id,
-                Firstname = user.Firstname,
-                Surname = user.Surname,
-                Country = user.Country,
-                City = user.City,
-            };
+            EditViewModel editModel = Mapper.DynamicMap<EditViewModel>(user);
             var selectedLanguage = user.Languages.Select(m => m.Id.ToString());
             ViewBag.LanguagesList = GetLanguages(new List<string>(selectedLanguage));
             return View(editModel);
@@ -189,7 +182,6 @@ namespace WebUI.Controllers
                 user.Country = editModel.Country;
                 user.City = editModel.City;
                 user.Languages = languages;
-                _unitOfWork.UserRepository.Update(user);
                 _unitOfWork.Commit();
                 return RedirectToAction("Manage");
             }

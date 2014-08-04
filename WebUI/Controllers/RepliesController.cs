@@ -84,9 +84,9 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                replyViewModel.Time = DateTime.Now;
-                var reply = Mapper.DynamicMap<Replies>(replyViewModel);
-                _unitOfWork.RepliesRepository.Update(reply);
+                var reply = _unitOfWork.RepliesRepository.Get(replyViewModel.TicketId);
+                reply.Time = DateTime.Now;
+                reply.Message = replyViewModel.Message;
                 _unitOfWork.Commit();
                 return RedirectToAction("ShowReply", new { id = reply.TicketId });
             }
