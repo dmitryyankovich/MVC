@@ -128,8 +128,11 @@ namespace WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var ticket = Mapper.DynamicMap<Ticket>(ticketViewModel);
-                _unitOfWork.TicketRepository.Update(ticket);
+                var ticket = _unitOfWork.TicketRepository.Get(ticketViewModel.Id);
+                ticket.Logo = ticketViewModel.Logo;
+                ticket.Title = ticketViewModel.Title;
+                ticket.Content = ticketViewModel.Content;
+                //_unitOfWork.TicketRepository.Update(ticket);
                 _unitOfWork.Commit();
                 return RedirectToAction("Tickets");
             }

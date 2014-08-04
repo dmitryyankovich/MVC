@@ -73,3 +73,18 @@ D:\New folder\MVC-master\New folder\BLL\bin\Debug\Microsoft.AspNet.Identity.Enti
 D:\New folder\MVC-master\New folder\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\New folder\MVC-master\New folder\BLL\obj\Debug\BLL.dll
 D:\New folder\MVC-master\New folder\BLL\obj\Debug\BLL.pdb
+F:\myProject\BLL\bin\Debug\BLL.dll.config
+F:\myProject\BLL\bin\Debug\BLL.dll
+F:\myProject\BLL\bin\Debug\BLL.pdb
+F:\myProject\BLL\bin\Debug\EntityFramework.dll
+F:\myProject\BLL\bin\Debug\EntityFramework.SqlServer.dll
+F:\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\myProject\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\myProject\BLL\bin\Debug\EntityFramework.xml
+F:\myProject\BLL\bin\Debug\EntityFramework.SqlServer.xml
+F:\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\myProject\BLL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\myProject\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\myProject\BLL\obj\Debug\BLL.dll
+F:\myProject\BLL\obj\Debug\BLL.pdb

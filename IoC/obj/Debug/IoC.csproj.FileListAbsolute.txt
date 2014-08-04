@@ -154,3 +154,29 @@ D:\New folder\MVC-master\New folder\IoC\bin\Debug\Ninject.Web.Mvc.xml
 D:\New folder\MVC-master\New folder\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
 D:\New folder\MVC-master\New folder\IoC\obj\Debug\IoC.dll
 D:\New folder\MVC-master\New folder\IoC\obj\Debug\IoC.pdb
+F:\myProject\IoC\bin\Debug\IoC.dll.config
+F:\myProject\IoC\bin\Debug\IoC.dll
+F:\myProject\IoC\bin\Debug\IoC.pdb
+F:\myProject\IoC\bin\Debug\BLL.dll
+F:\myProject\IoC\bin\Debug\DAL.dll
+F:\myProject\IoC\bin\Debug\EntityFramework.dll
+F:\myProject\IoC\bin\Debug\EntityFramework.SqlServer.dll
+F:\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\myProject\IoC\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\myProject\IoC\bin\Debug\Ninject.dll
+F:\myProject\IoC\bin\Debug\Ninject.Web.Common.dll
+F:\myProject\IoC\bin\Debug\Ninject.Web.Mvc.dll
+F:\myProject\IoC\bin\Debug\WebActivatorEx.dll
+F:\myProject\IoC\bin\Debug\BLL.pdb
+F:\myProject\IoC\bin\Debug\DAL.pdb
+F:\myProject\IoC\bin\Debug\EntityFramework.xml
+F:\myProject\IoC\bin\Debug\EntityFramework.SqlServer.xml
+F:\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\myProject\IoC\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\myProject\IoC\bin\Debug\Ninject.xml
+F:\myProject\IoC\bin\Debug\Ninject.Web.Common.xml
+F:\myProject\IoC\bin\Debug\Ninject.Web.Mvc.xml
+F:\myProject\IoC\obj\Debug\IoC.csprojResolveAssemblyReference.cache
+F:\myProject\IoC\obj\Debug\IoC.dll
+F:\myProject\IoC\obj\Debug\IoC.pdb
