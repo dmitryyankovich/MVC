@@ -17,6 +17,7 @@ namespace WebUI.ViewModels
         public string MessageText { get; set; }
         public int UserId { get; set; }
         public string UserName { get; set; }
+        public bool IsRead { get; set; }
         [Required]
         [StringLength(20, ErrorMessage = "The {0} must be maximum {1} characters long")]
         public string Title { get; set; }

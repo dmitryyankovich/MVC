@@ -18,6 +18,7 @@ namespace DAL.Models
         [Required]
         [StringLength(20,ErrorMessage = "The {0} must be maximum {1} characters long")]
         public string Title { get; set; }
+        public bool IsRead { get; set; }
         public virtual User User { get; set; }
     }
 }

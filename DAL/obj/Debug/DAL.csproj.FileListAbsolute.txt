@@ -117,3 +117,18 @@ D:\Programming\Git\MVC\DAL\bin\Debug\EntityFramework.SqlServer.xml
 D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 D:\Programming\Git\MVC\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Programming\Git\MVC\DAL\obj\Debug\DAL.pdb
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\DAL.dll.config
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\DAL.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\DAL.pdb
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\EntityFramework.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\EntityFramework.xml
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+D:\New folder\MVC-master\New folder\DAL\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\New folder\MVC-master\New folder\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+D:\New folder\MVC-master\New folder\DAL\obj\Debug\DAL.dll
+D:\New folder\MVC-master\New folder\DAL\obj\Debug\DAL.pdb

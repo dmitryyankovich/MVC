@@ -25,12 +25,26 @@
             @Html.DisplayFor(model => model.MessageText)
         </dd>
     </dl>
-<p>
-    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
-    {
-        @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
-        @Html.Raw(" |")
-        @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
-    }
-</p>
+    <p>
+        @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
+        {
+            @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
+            @Html.Raw(" |")
+            @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
+        }
+    </p>
 </div>
+
+<script>
+    'use strict';
+    $("#countMessages").empty();
+    $.ajax({
+        url: '../Message/MessagesCount',
+        dataType: 'html',
+        traditional: true,
+        type: 'GET',
+        success: function (content) {
+            $("#countMessages").html(content);
+        }
+    });
+</script>

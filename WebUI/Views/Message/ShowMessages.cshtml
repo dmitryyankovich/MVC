@@ -15,30 +15,60 @@
         </tr>
         @foreach (var item in Model)
         {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Time)
-                </td>
-                @if (item.UserId != Int32.Parse(User.Identity.GetUserId()))
-                {
+            if (item.IsRead == false)
+            {
+                <tr class="colored">
                     <td>
-                        @Html.DisplayFor(modelItem => item.UserName)
+                        @Html.DisplayFor(modelItem => item.Time)
                     </td>
-                }
-                else
-                {
-                    <td>
-                        @Html.DisplayFor(modelItem => item.UserNameTo)
-                    </td>
-                }
+                    @if (item.UserId != Int32.Parse(User.Identity.GetUserId()))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserNameTo)
+                        </td>
+                    }
                 
-                <td>
-                    @Html.DisplayFor(modelItem => item.Title)
-                </td>
-                <td>
-                    @Ajax.ActionLink("View details", "Details", "Message", new { id = item.Id }, new AjaxOptions { UpdateTargetId = "messagePartial" })
-                </td>
-            </tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Ajax.ActionLink("View details", "Details", "Message", new {id = item.Id}, new AjaxOptions {UpdateTargetId = "messagePartial"})
+                    </td>
+                </tr>
+            }
+            else
+            {
+                  <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Time)
+                    </td>
+                    @if (item.UserId != Int32.Parse(User.Identity.GetUserId()))
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserName)
+                        </td>
+                    }
+                    else
+                    {
+                        <td>
+                            @Html.DisplayFor(modelItem => item.UserNameTo)
+                        </td>
+                    }
+                
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Ajax.ActionLink("View details", "Details", "Message", new {id = item.Id}, new AjaxOptions {UpdateTargetId = "messagePartial"})
+                    </td>
+                </tr>
+            }
         }
     </table>
 </div>

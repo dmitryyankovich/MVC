@@ -296,3 +296,7 @@ textarea{
     margin: 0;
     margin-left: 14px;
 }
+
+.colored {
+    color: #FF7373;
+}

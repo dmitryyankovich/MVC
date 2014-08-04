@@ -15,6 +15,7 @@ namespace BLL.DomainModels
         public DateTime Time { get; set; }
         [StringLength(256, ErrorMessage = "The {0} must be maximum {1} characters long.")]
         public string MessageText { get; set; }
+        public bool IsRead { get; set; }
         [Required]
         [StringLength(20, ErrorMessage = "The {0} must be maximum {1} characters long")]
         public string Title { get; set; }

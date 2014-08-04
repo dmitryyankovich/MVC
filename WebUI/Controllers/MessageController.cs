@@ -24,7 +24,7 @@ namespace WebUI.Controllers
 
         public ActionResult MessagesCount()
         {
-            var messages = _unitOfWork.MessageRepository.GetAll().Count(m => m.UserNameTo == (User.Identity.GetUserName()));
+            var messages = _unitOfWork.MessageRepository.GetAll().Where(m => m.IsRead == false).Count(m => m.UserNameTo == (User.Identity.GetUserName()));
             return PartialView(messages);
         }
 
@@ -58,6 +58,8 @@ namespace WebUI.Controllers
         public ActionResult Details(int id)
         {
             Message message = _unitOfWork.MessageRepository.Get(id);
+            message.IsRead = true;
+            _unitOfWork.Commit();
             if (message == null)
             {
                 return HttpNotFound();
@@ -65,12 +67,14 @@ namespace WebUI.Controllers
             var feedbackView = Mapper.DynamicMap<MessageViewModel>(message);
             return PartialView(feedbackView);
         }
+
         // GET: /Replies/Create
         public ActionResult Create(int userId)
         {
             Message mess = new Message()
             {
-                UserNameTo = _unitOfWork.UserRepository.Get(userId).UserName
+                UserNameTo = _unitOfWork.UserRepository.Get(userId).UserName,
+                IsRead = false
             };
             var messageViewModel = Mapper.DynamicMap<MessageViewModel>(mess);
             return PartialView(messageViewModel);
