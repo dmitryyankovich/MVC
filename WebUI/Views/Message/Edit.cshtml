@@ -1,0 +1,36 @@
+﻿@model WebUI.ViewModels.MessageViewModel
+
+@{
+    Layout = null;
+}
+<div id="editMessage">
+    @using (Ajax.BeginForm("Edit", "Message", new AjaxOptions { UpdateTargetId = "editMessage" }))
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal editForm">
+            @Html.ValidationSummary(true)
+            @Html.HiddenFor(model => model.UserId)
+            <div class="form-group">
+                <div class="col-md-10">
+                    @Html.LabelFor(model => model.MessageText)
+                    @Html.TextAreaFor(model => model.MessageText)
+                    @Html.ValidationMessageFor(model => model.MessageText)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 rating">
+                    @Html.LabelFor(model => model.Title)
+                    @Html.TextBoxFor(model => model.Title)
+                    @Html.ValidationMessageFor(model => model.Title)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 create_feedback">
+                    <input type="submit" value="Save changes" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

@@ -1,28 +1,28 @@
-﻿@model WebUI.ViewModels.FeedbackViewModel
+﻿@using Microsoft.AspNet.Identity
+@model WebUI.ViewModels.MessageViewModel
 
 @{
     Layout = null;
 }
 
 <h3>Are you sure you want to delete this?</h3>
-<div id="replyDelete">
+<div id="messageDelete">
     @using (Html.BeginForm("Delete", "Feedback"))
     {
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
             @Html.ValidationSummary(true)
-            @Html.HiddenFor(model => model.UserToId)
             @Html.HiddenFor(model => model.UserId)
             <div class="form-group">
                 <div class="col-md-10">
-                    @Html.TextAreaFor(model => model.FeedbackMessage, new {@readonly = "readonly"})
+                    @Html.TextAreaFor(model => model.MessageText , new {@readonly = "readonly"})
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-10">
                     <input type="submit" value="Delete" class="btn btn-default" />
-                    @Html.ActionLink("Back to profile", "ViewProfile", "Account", new { id = Model.UserToId }, null)
+                    @Html.ActionLink("Back to profile", "Manage", "Account", new { id = Int32.Parse(User.Identity.GetUserId()) }, null)
                 </div>
             </div>
         </div>

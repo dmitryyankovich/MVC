@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNet.Identity
+@model WebUI.ViewModels.MessageViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <dl class="dl-horizontal">
+        <a id="user_profile" href="@Url.Action("ViewProfile", "Account", new { id = Model.UserId })">
+            @Model.UserName
+        </a>
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MessageText)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MessageText)
+        </dd>
+    </dl>
+</div>
+<p>
+    @if (Int32.Parse(User.Identity.GetUserId()) == Model.UserId)
+    {
+        @Ajax.ActionLink("Edit", "Edit", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
+        @Html.Raw(" |")
+        @Ajax.ActionLink("Delete", "Delete", new { id = Model.Id }, new AjaxOptions { UpdateTargetId = "messageForm" })
+    }
+</p>

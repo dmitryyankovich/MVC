@@ -55,14 +55,18 @@
         </dd>
     </dl>
 </div>
-<div class="col-md-6" id="feedback">
-    @Ajax.ActionLink("Add feedback", "Create", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedback" })
-    <div id="feedbacks">
-        <div id="feedbackForm">
-            @using (Ajax.BeginForm("ShowFeedbacks", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedbackForm" }))
-            {
-                <input type="submit" value="Show feedbacks" class="btn btn-default" />
-            }
+<div class="col-md-6">
+    <div id="messages"></div>
+    @Ajax.ActionLink("Send message", "Create", "Message", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "messages" })
+    <div id="feedback">
+        @Ajax.ActionLink("Add feedback", "Create", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedback" })
+        <div id="feedbacks">
+            <div id="feedbackForm">
+                @using (Ajax.BeginForm("ShowFeedbacks", "Feedback", new { userId = Model.Id }, new AjaxOptions { UpdateTargetId = "feedbackForm" }))
+                {
+                    <input type="submit" value="Show feedbacks" class="btn btn-default" />
+                }
+            </div>
         </div>
     </div>
 </div>

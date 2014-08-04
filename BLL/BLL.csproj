@@ -86,6 +86,7 @@
     <Compile Include="DomainModels\IdentityModels.cs" />
     <Compile Include="DomainModels\IdModel.cs" />
     <Compile Include="DomainModels\Languages.cs" />
+    <Compile Include="DomainModels\Message.cs" />
     <Compile Include="DomainModels\Photos.cs" />
     <Compile Include="DomainModels\Replies.cs" />
     <Compile Include="DomainModels\Ticket.cs" />

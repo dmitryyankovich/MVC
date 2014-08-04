@@ -88,6 +88,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IdModel.cs" />
     <Compile Include="Models\Languages.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Photos.cs" />
     <Compile Include="Models\Replies.cs" />
     <Compile Include="Models\Ticket.cs" />

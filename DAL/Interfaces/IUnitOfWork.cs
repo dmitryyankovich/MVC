@@ -15,6 +15,7 @@ namespace DAL.Interfaces
         IRepository<Languages> LanguagesRepository { get; }
         IRepository<Replies> RepliesRepository { get; }
         IRepository<Feedback> FeedbackRepository { get; }
+        IRepository<Message> MessageRepository { get; } 
         void Commit();
     }
 }

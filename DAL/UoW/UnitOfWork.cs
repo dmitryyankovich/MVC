@@ -24,11 +24,13 @@ namespace DAL.UoW
         private MyProjectRepository<Languages> languagesRepository;
         private MyProjectRepository<Replies> repliesRepository;
         private MyProjectRepository<Feedback> feedbackRepository;
+        private MyProjectRepository<Message> messageRepository;
 
         public DbSet<Ticket> Tickets { get; set; }
         public DbSet<Languages> Languages { get; set; }
         public DbSet<Replies> Replies { get; set; }
         public DbSet<Feedback> Feedback { get; set; }
+        public DbSet<Message> Message { get; set; }
 
         public IRepository<User> UserRepository
         {
@@ -53,6 +55,11 @@ namespace DAL.UoW
         public IRepository<Feedback> FeedbackRepository
         {
             get { return feedbackRepository ?? (feedbackRepository = new MyProjectRepository<Feedback>(Feedback)); }
+        }
+
+        public IRepository<Message> MessageRepository
+        {
+            get { return messageRepository ?? (messageRepository = new MyProjectRepository<Message>(Message)); }
         }
 
         public void Commit()

@@ -6,30 +6,6 @@
 }
 
 <h2 class="ticket_header">Tickets</h2>
-
-@using (@Html.BeginForm())
-{
-    @Html.ValidationSummary(true)
-    <div class="search">
-        <div class="editor-label">
-            <h5>Country</h5>
-        </div>
-        <div class="editor-field">
-            @Html.TextBox("country")
-        </div>
-    </div>
-    <div class="search">
-        <div class="editor-label">
-            <h5>City</h5>
-        </div>
-        <div class="editor-field">
-            @Html.TextBox("city")
-        </div>
-    </div>
-    <div class="search" style="margin-top:9px">
-        <input type="submit" value="Найти" />
-    </div>
-}
 <p class="create_ticket">
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -83,4 +59,23 @@
     <ul class="filter-options">
         <li><a href="@Url.Action("Tickets", new { sort = 1, pageNum = Model.First().CurrentPage})">Sort by type</a></li>
     </ul>
+    @using (@Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <div class="form-horizontal">
+            <div class="col-md-10">
+                <h5>Country</h5>
+                @Html.TextBox("country")
+            </div>
+            <div class="col-md-10">
+                <h5>City</h5>
+                @Html.TextBox("city")
+            </div>
+            <div class="form-group">
+                <div class="col-md-10 find">
+                    <input type="submit" value="Find" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
 </div>

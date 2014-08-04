@@ -68,7 +68,9 @@
         <p>
             @Html.ActionLink("Edit", "Edit", new { id = Model.Id })
         </p>
-
+        <div id="messages"></div>
+        @Ajax.ActionLink("Input", "ShowMessages", "Message", new { userId = Model.Id , output = 0 }, new AjaxOptions { UpdateTargetId = "messages" })
+        @Ajax.ActionLink("Output", "ShowMessages", "Message", new { userId = Model.Id, output = 1 }, new AjaxOptions { UpdateTargetId = "messages" })
         @using (Ajax.BeginForm("UserTickets", "Ticket", new AjaxOptions { UpdateTargetId = "ticketsPartial" }))
         {
             <input type="submit" value="Show tickets" class="btn btn-default" />

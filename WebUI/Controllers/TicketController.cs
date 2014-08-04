@@ -64,27 +64,16 @@ namespace WebUI.Controllers
 
 
         [HttpPost]
-        public ActionResult Tickets(string country, string city,int sort = 0, int pageNum = 0)
+        public ActionResult Tickets(string country, string city)
         {
             var tickets = _unitOfWork.TicketRepository.GetAll()
                 .Where(m => m.User.City.Contains(city))
                 .Where(m => m.User.Country.Contains(country));
-            if (sort != 0)
-            {
-                tickets = tickets.OrderBy(s => s.TypeOfTicket);
-            }
-            int ticketCount = tickets.Count();
-            tickets = tickets.Skip(ticketsPerPage * pageNum).Take(ticketsPerPage);
-            int ticketsPageNum = 0;
-            ticketsPageNum = ticketCount % ticketsPerPage != 0 ? (ticketCount / ticketsPerPage + 1) : ticketCount / ticketsPerPage;
             var ticketsView = new List<ShowTicketsViewModel>();
             foreach (Ticket ticket in tickets)
             {
                 ticketsView.Add(Mapper.DynamicMap<ShowTicketsViewModel>(ticket));
             }
-            ticketsView[0].NumberOfPages = ticketsPageNum;
-            ticketsView[0].ToSort = sort;
-            ticketsView[0].CurrentPage = pageNum;
             return View(ticketsView); 
         }
 

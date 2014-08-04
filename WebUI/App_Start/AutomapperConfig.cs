@@ -50,6 +50,12 @@ namespace WebUI
 
             Mapper.CreateMap<User, ViewProfileViewModel>();
 
+            Mapper.CreateMap<Message, MessageViewModel>().AfterMap((message, viewmodel) =>
+            {
+                viewmodel.UserName = message.User.UserName;
+            });
+
+            Mapper.CreateMap<MessageViewModel, Message>();
         }
     }
 }

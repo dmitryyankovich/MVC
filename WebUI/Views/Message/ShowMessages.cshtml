@@ -1,0 +1,34 @@
+﻿@model IEnumerable<WebUI.ViewModels.MessageViewModel>
+<div id="messagePartial">
+    <table class="table_class">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.UserName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Ajax.ActionLink("View details", "Details", "Message", new { id = item.Id }, new AjaxOptions { UpdateTargetId = "messagePartial" })
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
